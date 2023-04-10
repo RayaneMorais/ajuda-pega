@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+ <head>
+	
+	<meta charset="utf-8">
+    <meta http-equiv="content-language" content="pt-br" />  
+
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<title>Ajuda Pega</title>
+
+ </head>
+
+<body>
+    
+
+<main class="main_content container">
+
+            <div class="box-artigo">
+                <nav class="menu">
+                  <ul>
+                    <li><a href="index.html" title="Home" target="_self">Home</a></li>  
+                    <li><a href="funcoes.html" title="Funções" target="_self">Funções</a></li>
+                    <li><a href="solucoesJava.html" title="Soluções Java" target="_self">Soluções Java</a></li>  
+                    <li><a href="solucoesCSS.html" title="Soluções CSS" target="_self">Soluções CSS</a></li> 
+					<li><a href="solucoesHTML.html" title="Soluções HTML" target="_self">Soluções HTML</a></li>
+                  </ul>
+                </nav>  
+            </div><!--Box Artigo-->
+		
+		<div style="padding-left:30px">
+		<h2>Soluções Java</h2>
+		<br>
+	<table style="width:90%;">
+    <td style="width:60%;"><img src="img/removeacento.png" alt="removeAcentuacao()"></td>
+    <td>A função <b>Remove Acentuacao</b> desenvolvido com um código JAVA foi criada para remover todos os caracteres especiais do texto.</p> 
+	<br><em><b>Código:</b> 
+	<textarea rows=3 cols=100 readonly>return java.text.Normalizer.normalize(texto, java.text.Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", "");</textarea></em></td>	
+  </tr>
+</table>
+<br>
+	<table style="width:90%;">
+    <td style="width:60%;"><img src="img/editvalidateemail.png" alt="editValidateEmail()"></td>
+    <td>A função <b>Edit Validate de E-mail</b> desenvolvido com um código JAVA foi criada para validar o campo de e-mail.</p> 
+	<br><em><b>Código:</b> 
+	<textarea rows=10 cols=100 readonly>try{
+  String pattern = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"+ "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+// Create a Pattern object
+java.util.regex.Pattern r = java.util.regex.Pattern.compile(pattern);
+// Now create matcher object.
+java.util.regex.Matcher m = r.matcher(theValue);
+if (m.find( )) {
+     System.out.println("Found value: " + m.group(0) );
+     System.out.println("Found value: " + m.group(1) );
+     System.out.println("Found value: " + m.group(2) );
+  return true;}
+  else {
+         System.out.println("NO MATCH");
+  return false;}
+}catch(Exception e){return false;}</textarea></em></td>	
+  </tr>
+</table>
+<br>
+	<table style="width:90%;">
+    <td style="width:60%;"><img src="img/editvalidatewhatsapp.png" alt="editValidateWhatsapp()"></td>
+    <td>A função <b>Edit Validate de Whatsapp</b> desenvolvido com um código JAVA foi criada para validar o campo de Whatsapp.</p><br>
+	<div class="conteudo"><em><b>Código:</b>
+	<textarea rows=10 cols=100 readonly>try{
+  String value = "";
+  value  = theValue.replace("(","").replace(")","").replace("-","").replace(" ","");  
+  java.util.regex.Pattern p = java.util.regex.Pattern.compile("(\\D)");
+  java.util.regex.Matcher m = p.matcher( value );
+  if (m.find()) {
+    theProperty.addMessage("Telefone Inválido");
+    return false;
+  }
+		//Verifica se esta vazio
+		 if (value.equals("") ){
+           theProperty.addMessage("Preencha o Telefone");
+           return false;
+         }         
+	    //verifica se tem a qtde de numeros correta
+	    if (!(value.length() == 11)){
+			theProperty.addMessage("Número de Telefone Celular Inválido");          
+			return false;
+        } 
+	    //Verificar se começa com 9 o celular
+	    if (value.length() == 11 && Integer.parseInt(value.substring(2, 3)) != 9){
+          theProperty.addMessage("Número de Telefone Celular Inválido");
+          return false;
+        } 
+    if ((value.contains("00000000")) || (value.contains("11111111")) || (value.contains("22222222")) || (value.contains("33333333")) || (value.contains("44444444")) || (value.contains("55555555")) || (value.contains("66666666")) || (value.contains("77777777")) || (value.contains("88888888")) || (value.contains("99999999")) ) {
+      theProperty.addMessage("Número de Telefone Inválido");
+      return false;
+}
+	  //DDDs validos
+	    Integer[] codigosDDD = new Integer[]{11, 12, 13, 14, 15, 16, 17, 18, 19,21, 22, 24, 27, 28, 31, 32, 33, 34,35, 37, 38, 41, 42, 43, 44, 45, 46,47, 48, 
+         49, 51, 53, 54, 55, 61, 62,64, 63, 65, 66, 67, 68, 69, 71, 73,74, 75, 77, 79, 81, 82, 83, 84, 85,86, 87, 88, 89, 91, 92, 93, 94, 95,96, 97, 98, 99};
+	    
+	    //  E por ultimo verificar se o numero é realmente válido. Até 2016 um celular pode, ter 8 caracteres, após isso somente numeros de telefone e radios (ex. Nextel)
+	    //vão poder ter numeros de 8 digitos (fora o DDD), então esta função ficará inativa
+
+	    if (java.util.Arrays.asList(codigosDDD).indexOf(Integer.parseInt(value.substring(0, 2))) == -1){
+          theProperty.addMessage("Número de DDD inválido.");
+          return false;
+        } 
+	    	    
+	   //se passar por todas as validações acima, então está tudo certo
+	    return true;
+           }catch(Exception e){
+  				theProperty.addMessage("Número de Telefone inválido.");          
+  				return false;
+        }</textarea></em></td></tr>
+</table>
+		<br>
+	<table style="width:90%;">
+    <td style="width:60%;"><img src="img/tratalistadinamica.png" alt="Trata Lista Dinâmica()"></td>
+    <td>A função <b>Trata Lista Dinâmica</b> desenvolvido com um código JAVA foi criada para tratar a lista dinâmica, no exemplo a "Lista2" retornada no response do serviço pode vim com qualquer valor. Desta forma, é necessário salvar para fazer comparações dentro do pega.</p> 
+	<br><em><b>Exemplo:</b> 
+	<textarea rows=5 cols=100 readonly>"Lista": [{
+            "Lista2": [
+                "Valor1",
+                "Valor2"
+            ]}</textarea></em>
+	<br><em><b>Código:</b> 
+	<textarea rows=10 cols=100 readonly>ClipboardProperty response_GET = tools.getStepPage().getProperty("response_GET");
+ClipboardProperty Lista = response_GET.getProperty("Lista");
+ClipboardPage NovaLista = tools.getStepPage().getPage("NovaLista");
+NovaLista.putString("pxObjClass", "Code-Pega-List");
+ClipboardProperty NovaListaResults = NovaLista.getProperty("pxResults");
+int ListaSize = Lista.size();
+String prop = "";
+Map.Entry item = null;
+for (int i = 1; i <= ListaSize; i++) {
+    ClipboardPage ComparaLista = Lista.getPageValue(i);
+    Iterator itr = ComparaLista.entrySet().iterator();
+    while (itr.hasNext()) {
+    item = (Map.Entry) itr.next();
+        prop = (String) item.getKey();
+    if (prop.equals("pxObjClass")) {
+      continue;
+    }
+  ClipboardPage NovaList = NovaListaResults.getPageValue(ClipboardProperty.LIST_APPEND);
+    NovaList.putString("pxObjClass", "Code-Pega-List");
+    NovaList.putString("pyLabel", prop);
+        ClipboardProperty listaProdutos = NovaList.getProperty("pxResults");
+        ClipboardProperty lista = ComparaLista.getIfPresent(prop);
+        Iterator<ClipboardProperty> listaIterator = lista.iterator();
+    while (listaIterator.hasNext()) {
+            ClipboardProperty produto = listaIterator.next();
+            String produtoCodigo = produto.getStringValue("pyValue");
+            ClipboardPage produtoMapeado = listaProdutos.getPageValue(ClipboardProperty.LIST_APPEND);
+      produtoMapeado.putString("pxObjClass", "@baseclass");
+            produtoMapeado.putString("pyValue", produtoCodigo);
+        }}}</textarea></em></td>	
+  </tr>
+</table>
+<br>
+	<table style="width:90%;">
+    <td style="width:60%;"><img src="img/copiadethread.png" alt="copiaDeThread()"></td>
+    <td>A função <b>Copia de Thread</b> desenvolvido com um código JAVA foi criada para copiar lista e propriedade de uma thread para outra.</p> 
+	<br><em><b>Código:</b> 
+	<textarea rows=10 cols=100 readonly>boolean existeOpenPortal = tools.getRequestor().getThread("OpenPortal") != null;
+boolean existeStandard   = tools.getRequestor().getThread("STANDARD") != null;
+String TerminalSelecionado;
+
+if (existeOpenPortal) {
+  TerminalSelecionado = "OpenPortal";
+} else {
+  TerminalSelecionado ="STANDARD";
+}
+//Cópia Lista
+((com.pega.pegarules.priv.context.PegaThread)tools.getThread()).copyPageFromAnotherThread("ListaExemplo", ListaExemploCopiada);
+
+//Cópia property
+ClipboardPage page = tools.getRequestor().getThread(TerminalSelecionado).getPage("ListaExemplo");
+ClipboardPage page1 = page.getPage("ListaExemploInterna");
+ClipboardPage page2 = tools.getRequestor().getThread(TerminalSelecionado).getPage("ListaExemploCopiada");
+((com.pega.pegarules.priv.context.PegaThread)tools.getThread()).getPage("ListaExemploCopiada").getProperty("PropriedadeNova").setValue(page1.getProperty("PropriedadeAntiga"));
+</textarea></em></td>	
+  </tr>
+</table>
+		<br>
+	<table style="width:90%;">
+    <td style="width:60%;">
+	<iframe  width="100%" height="344" src="https://players.brightcove.net/1519050010001/obdhcLv77W_default/index.html?videoId=5752178029001" frameborder="0" allowfullscreen></iframe>
+</td>
+    <td>A função <b>Debug Java</b> usado para depurar Java em Activity e Rule-Utility-Functions.</p> 
+	<br><em><b>Código:</b> 
+	<textarea rows=3 cols=100 readonly>pega_rules_utilities.sendDebugMessageToTracer("MENSAGEM", "<RULESET>");</textarea></em></td>	
+  </tr>
+</table>
+    </div>
+<br><br><br><br><br><br><br><br>
+</main>
+
+<footer class="main_footer container">
+    <div class="main_footer_copy">
+
+        <p class="m-b-footer"> Rayane Morais - 2023, todos os direitos reservados.</p> 
+        <p class="by"><i class="icon icon-heart-3"></i> Desenvolvido por: Rayane Morais</p>
+    
+    </div>
+</footer>
+
+<script src="js/jquery.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
