@@ -1,51 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
- <head>
-	
-	<meta charset="utf-8">
-    <meta http-equiv="content-language" content="pt-br" />  
+<head>
 
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta charset="utf-8">
+  <meta http-equiv="content-language" content="pt-br" />
 
-	<title>Ajuda Pega</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 
- </head>
+  <title>Ajuda Pega</title>
+
+</head>
 
 <body>
-    
 
-<main class="main_content container">
 
-            <div class="box-artigo">
-                <nav class="menu">
-                  <ul>
-                    <li><a href="index.html" title="Home" target="_self">Home</a></li>  
-                    <li><a href="funcoes.html" title="Funções" target="_self">Funções</a></li>
-                    <li><a href="solucoesJava.html" title="Soluções Java" target="_self">Soluções Java</a></li>  
-                    <li><a href="solucoesCSS.html" title="Soluções CSS" target="_self">Soluções CSS</a></li> 
-					<li><a href="solucoesHTML.html" title="Soluções HTML" target="_self">Soluções HTML</a></li>
-                  </ul>
-                </nav>  
-            </div><!--Box Artigo-->
-		
-		<div style="padding-left:30px">
-		<h2>Soluções Java</h2>
-		<br>
-	<table style="width:90%;">
-    <td style="width:60%;"><img src="img/removeacento.png" alt="removeAcentuacao()"></td>
-    <td>A função <b>Remove Acentuacao</b> desenvolvido com um código JAVA foi criada para remover todos os caracteres especiais do texto.</p> 
-	<br><em><b>Código:</b> 
-	<textarea rows=3 cols=100 readonly>return java.text.Normalizer.normalize(texto, java.text.Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", "");</textarea></em></td>	
-  </tr>
-</table>
-<br>
-	<table style="width:90%;">
-    <td style="width:60%;"><img src="img/editvalidateemail.png" alt="editValidateEmail()"></td>
-    <td>A função <b>Edit Validate de E-mail</b> desenvolvido com um código JAVA foi criada para validar o campo de e-mail.</p> 
-	<br><em><b>Código:</b> 
-	<textarea rows=10 cols=100 readonly>try{
+  <main class="main_content container">
+
+    <div class="box-artigo">
+      <nav class="menu">
+        <ul>
+          <li><a href="index.html" title="Home" target="_self">Home</a></li>
+          <li><a href="funcoes.html" title="Funções" target="_self">Funções</a></li>
+          <li><a href="solucoesJava.html" title="Soluções Java" target="_self">Soluções Java</a></li>
+          <li><a href="solucoesCSS.html" title="Soluções CSS" target="_self">Soluções CSS</a></li>
+          <li><a href="solucoesHTML.html" title="Soluções HTML" target="_self">Soluções HTML</a></li>
+        </ul>
+      </nav>
+    </div><!--Box Artigo-->
+
+    <div style="padding-left:30px">
+      <h2>Soluções Java</h2>
+      <br>
+      <table style="width:90%;">
+        <td style="width:60%;"><img src="img/removeacento.png" alt="removeAcentuacao()"></td>
+        <td>A função <b>Remove Acentuacao</b> desenvolvido com um código JAVA foi criada para remover todos os
+          caracteres especiais do texto.</p>
+          <br><em><b>Código:</b>
+            <textarea rows=3 cols=100
+              readonly>return java.text.Normalizer.normalize(texto, java.text.Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", "");</textarea></em>
+        </td>
+        </tr>
+      </table>
+      <br>
+      <table style="width:90%;">
+        <td style="width:60%;"><img src="img/editvalidateemail.png" alt="editValidateEmail()"></td>
+        <td>A função <b>Edit Validate de E-mail</b> desenvolvido com um código JAVA foi criada para validar o campo de
+          e-mail.</p>
+          <br><em><b>Código:</b>
+            <textarea rows=10 cols=100 readonly>try{
   String pattern = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"+ "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 // Create a Pattern object
 java.util.regex.Pattern r = java.util.regex.Pattern.compile(pattern);
@@ -59,15 +63,17 @@ if (m.find( )) {
   else {
          System.out.println("NO MATCH");
   return false;}
-}catch(Exception e){return false;}</textarea></em></td>	
-  </tr>
-</table>
-<br>
-	<table style="width:90%;">
-    <td style="width:60%;"><img src="img/editvalidatewhatsapp.png" alt="editValidateWhatsapp()"></td>
-    <td>A função <b>Edit Validate de Whatsapp</b> desenvolvido com um código JAVA foi criada para validar o campo de Whatsapp.</p><br>
-	<div class="conteudo"><em><b>Código:</b>
-	<textarea rows=10 cols=100 readonly>try{
+}catch(Exception e){return false;}</textarea></em>
+        </td>
+        </tr>
+      </table>
+      <br>
+      <table style="width:90%;">
+        <td style="width:60%;"><img src="img/editvalidatewhatsapp.png" alt="editValidateWhatsapp()"></td>
+        <td>A função <b>Edit Validate de Whatsapp</b> desenvolvido com um código JAVA foi criada para validar o campo de
+          Whatsapp.</p><br>
+          <div class="conteudo"><em><b>Código:</b>
+              <textarea rows=10 cols=100 readonly>try{
   String value = "";
   value  = theValue.replace("(","").replace(")","").replace("-","").replace(" ","");  
   java.util.regex.Pattern p = java.util.regex.Pattern.compile("(\\D)");
@@ -112,20 +118,24 @@ if (m.find( )) {
            }catch(Exception e){
   				theProperty.addMessage("Número de Telefone inválido.");          
   				return false;
-        }</textarea></em></td></tr>
-</table>
-		<br>
-	<table style="width:90%;">
-    <td style="width:60%;"><img src="img/tratalistadinamica.png" alt="Trata Lista Dinâmica()"></td>
-    <td>A função <b>Trata Lista Dinâmica</b> desenvolvido com um código JAVA foi criada para tratar a lista dinâmica, no exemplo a "Lista2" retornada no response do serviço pode vim com qualquer valor. Desta forma, é necessário salvar para fazer comparações dentro do pega.</p> 
-	<br><em><b>Exemplo:</b> 
-	<textarea rows=5 cols=100 readonly>"Lista": [{
+        }</textarea></em>
+        </td>
+        </tr>
+      </table>
+      <br>
+      <table style="width:90%;">
+        <td style="width:60%;"><img src="img/tratalistadinamica.png" alt="Trata Lista Dinâmica()"></td>
+        <td>A função <b>Trata Lista Dinâmica</b> desenvolvido com um código JAVA foi criada para tratar a lista
+          dinâmica, no exemplo a "Lista2" retornada no response do serviço pode vim com qualquer valor. Desta forma, é
+          necessário salvar para fazer comparações dentro do pega.</p>
+          <br><em><b>Exemplo:</b>
+            <textarea rows=5 cols=100 readonly>"Lista": [{
             "Lista2": [
                 "Valor1",
                 "Valor2"
             ]}</textarea></em>
-	<br><em><b>Código:</b> 
-	<textarea rows=10 cols=100 readonly>ClipboardProperty response_GET = tools.getStepPage().getProperty("response_GET");
+          <br><em><b>Código:</b>
+            <textarea rows=10 cols=100 readonly>ClipboardProperty response_GET = tools.getStepPage().getProperty("response_GET");
 ClipboardProperty Lista = response_GET.getProperty("Lista");
 ClipboardPage NovaLista = tools.getStepPage().getPage("NovaLista");
 NovaLista.putString("pxObjClass", "Code-Pega-List");
@@ -154,15 +164,17 @@ for (int i = 1; i <= ListaSize; i++) {
             ClipboardPage produtoMapeado = listaProdutos.getPageValue(ClipboardProperty.LIST_APPEND);
       produtoMapeado.putString("pxObjClass", "@baseclass");
             produtoMapeado.putString("pyValue", produtoCodigo);
-        }}}</textarea></em></td>	
-  </tr>
-</table>
-<br>
-	<table style="width:90%;">
-    <td style="width:60%;"><img src="img/copiadethread.png" alt="copiaDeThread()"></td>
-    <td>A função <b>Copia de Thread</b> desenvolvido com um código JAVA foi criada para copiar lista e propriedade de uma thread para outra.</p> 
-	<br><em><b>Código:</b> 
-	<textarea rows=10 cols=100 readonly>boolean existeOpenPortal = tools.getRequestor().getThread("OpenPortal") != null;
+        }}}</textarea></em>
+        </td>
+        </tr>
+      </table>
+      <br>
+      <table style="width:90%;">
+        <td style="width:60%;"><img src="img/copiadethread.png" alt="copiaDeThread()"></td>
+        <td>A função <b>Copia de Thread</b> desenvolvido com um código JAVA foi criada para copiar lista e propriedade
+          de uma thread para outra.</p>
+          <br><em><b>Código:</b>
+            <textarea rows=10 cols=100 readonly>boolean existeOpenPortal = tools.getRequestor().getThread("OpenPortal") != null;
 boolean existeStandard   = tools.getRequestor().getThread("STANDARD") != null;
 String TerminalSelecionado;
 
@@ -179,33 +191,39 @@ ClipboardPage page = tools.getRequestor().getThread(TerminalSelecionado).getPage
 ClipboardPage page1 = page.getPage("ListaExemploInterna");
 ClipboardPage page2 = tools.getRequestor().getThread(TerminalSelecionado).getPage("ListaExemploCopiada");
 ((com.pega.pegarules.priv.context.PegaThread)tools.getThread()).getPage("ListaExemploCopiada").getProperty("PropriedadeNova").setValue(page1.getProperty("PropriedadeAntiga"));
-</textarea></em></td>	
-  </tr>
-</table>
-		<br>
-	<table style="width:90%;">
-    <td style="width:60%;">
-	<iframe  width="100%" height="344" src="https://players.brightcove.net/1519050010001/obdhcLv77W_default/index.html?videoId=5752178029001" frameborder="0" allowfullscreen></iframe>
-</td>
-    <td>A função <b>Debug Java</b> usado para depurar Java em Activity e Rule-Utility-Functions.</p> 
-	<br><em><b>Código:</b> 
-	<textarea rows=3 cols=100 readonly>pega_rules_utilities.sendDebugMessageToTracer("MENSAGEM", "<RULESET>");</textarea></em></td>	
-  </tr>
-</table>
+</textarea></em>
+        </td>
+        </tr>
+      </table>
+      <br>
+      <table style="width:90%;">
+        <td style="width:60%;">
+          <iframe width="100%" height="344"
+            src="https://players.brightcove.net/1519050010001/obdhcLv77W_default/index.html?videoId=5752178029001"
+            frameborder="0" allowfullscreen></iframe>
+        </td>
+        <td>A função <b>Debug Java</b> usado para depurar Java em Activity e Rule-Utility-Functions.</p>
+          <br><em><b>Código:</b>
+            <textarea rows=3 cols=100
+              readonly>pega_rules_utilities.sendDebugMessageToTracer("MENSAGEM", "<RULESET>");</textarea></em>
+        </td>
+        </tr>
+      </table>
     </div>
-<br><br><br><br><br><br><br><br>
-</main>
+    <br><br><br><br><br><br><br><br>
+  </main>
 
-<footer class="main_footer container">
+  <footer class="main_footer container">
     <div class="main_footer_copy">
 
-        <p class="m-b-footer"> Rayane Morais - 2023, todos os direitos reservados.</p> 
-        <p class="by"><i class="icon icon-heart-3"></i> Desenvolvido por: Rayane Morais</p>
-    
-    </div>
-</footer>
+      <p class="m-b-footer"> Rayane Morais - 2023, todos os direitos reservados.</p>
+      <p class="by"><i class="icon icon-heart-3"></i> Desenvolvido por: Rayane Morais</p>
 
-<script src="js/jquery.js"></script>
-<script src="js/script.js"></script>
+    </div>
+  </footer>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/script.js"></script>
 </body>
+
 </html>

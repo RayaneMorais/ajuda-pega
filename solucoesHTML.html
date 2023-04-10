@@ -3,71 +3,75 @@
 
 <head>
 
-<meta charset="utf-8">
-<meta http-equiv="content-language" content="pt-br" />  
+	<meta charset="utf-8">
+	<meta http-equiv="content-language" content="pt-br" />
 
-<link rel="stylesheet" type="text/css" href="css/reset.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 
-<title>Ajuda Pega</title>
+	<title>Ajuda Pega</title>
 
 </head>
 
 <body>
 
 
-<main class="main_content container">
+	<main class="main_content container">
 
 		<div class="box-artigo">
 			<nav class="menu">
-			  <ul>
-				<li><a href="index.html" title="Home" target="_self">Home</a></li>  
-				<li><a href="funcoes.html" title="Funções" target="_self">Funções</a></li>
-				<li><a href="solucoesJava.html" title="Soluções Java" target="_self">Soluções Java</a></li>  
-				<li><a href="solucoesCSS.html" title="Soluções CSS" target="_self">Soluções CSS</a></li>  
-				<li><a href="solucoesHTML.html" title="Soluções HTML" target="_self">Soluções HTML</a></li>
-			  </ul>
-			</nav>  
+				<ul>
+					<li><a href="index.html" title="Home" target="_self">Home</a></li>
+					<li><a href="funcoes.html" title="Funções" target="_self">Funções</a></li>
+					<li><a href="solucoesJava.html" title="Soluções Java" target="_self">Soluções Java</a></li>
+					<li><a href="solucoesCSS.html" title="Soluções CSS" target="_self">Soluções CSS</a></li>
+					<li><a href="solucoesHTML.html" title="Soluções HTML" target="_self">Soluções HTML</a></li>
+				</ul>
+			</nav>
 		</div><!--Box Artigo-->
-	
-	<div style="padding-left:30px">
-	<h2>Soluções CSS</h2>
-	<br>
-	<b>Chama When</b><br>
-	<em>Código: <textarea rows=1 cols=100 readonly><pega:when test="NomeWhen"></pega:when></textarea></em>
-<br><br>
-	<b>Chama Section</b><br>
-	<em>Código: <textarea rows=1 cols=100 readonly><pega:include name="NomeSection" type="Rule-HTML-Section"></pega:include></textarea></em>
-<br><br>
-	<b>Chama Paragrafo</b><br>
-	<em>Código: <textarea rows=1 cols=100 readonly><pega:include name="NomeParagrafo" type="Rule-HTML-Paragraph"></pega:include></textarea></em>
-<br><br>
-	<b>Chama Property</b><br>
-	<em>Código: <textarea rows=1 cols=100 readonly><pega:reference name=".NomePropriedade"></pega:reference></textarea></em>
-<br><br>
-	<b>Chama Lista</b><br>
-	<em>Código: <textarea rows=7 cols=100 readonly><pega:forEach name="Lista.pxResults">
+
+		<div style="padding-left:30px">
+			<h2>Soluções CSS</h2>
+			<br>
+			<b>Chama When</b><br>
+			<em>Código: <textarea rows=1 cols=100 readonly><pega:when test="NomeWhen"></pega:when></textarea></em>
+			<br><br>
+			<b>Chama Section</b><br>
+			<em>Código: <textarea rows=1 cols=100
+					readonly><pega:include name="NomeSection" type="Rule-HTML-Section"></pega:include></textarea></em>
+			<br><br>
+			<b>Chama Paragrafo</b><br>
+			<em>Código: <textarea rows=1 cols=100
+					readonly><pega:include name="NomeParagrafo" type="Rule-HTML-Paragraph"></pega:include></textarea></em>
+			<br><br>
+			<b>Chama Property</b><br>
+			<em>Código: <textarea rows=1 cols=100
+					readonly><pega:reference name=".NomePropriedade"></pega:reference></textarea></em>
+			<br><br>
+			<b>Chama Lista</b><br>
+			<em>Código: <textarea rows=7 cols=100 readonly><pega:forEach name="Lista.pxResults">
 <tr>
 <td style='border-radius: 5px;border: 1px solid #0870b9; padding: 15px;text-align: left;vertical-align: middle;width: 60%;'> <pega:reference name="$THIS.Name" /> </td>
 <td style='border-radius: 5px;border: 1px solid #0870b9; padding: 15px;text-align: left;vertical-align: middle;width: 20%;'> <pega:reference name="$THIS.Value" /> </td>
 <td style='border-radius: 5px;border: 1px solid #0870b9; padding: 15px;text-align: left;vertical-align: middle;width: 20%;'>  <pega:reference name="$THIS.Height" /> </td>
 </tr>        
 </pega:forEach></textarea></em>
-	</div>
-	
-<br><br><br><br><br><br><br><br>
-</main>
+		</div>
 
-<footer class="main_footer container">
-<div class="main_footer_copy">
+		<br><br><br><br><br><br><br><br>
+	</main>
 
-	<p class="m-b-footer"> Rayane Morais - 2023, todos os direitos reservados.</p> 
-	<p class="by"><i class="icon icon-heart-3"></i> Desenvolvido por: Rayane Morais</p>
+	<footer class="main_footer container">
+		<div class="main_footer_copy">
 
-</div>
-</footer>
+			<p class="m-b-footer"> Rayane Morais - 2023, todos os direitos reservados.</p>
+			<p class="by"><i class="icon icon-heart-3"></i> Desenvolvido por: Rayane Morais</p>
 
-<script src="js/jquery.js"></script>
-<script src="js/script.js"></script>
+		</div>
+	</footer>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/script.js"></script>
 </body>
+
 </html>
