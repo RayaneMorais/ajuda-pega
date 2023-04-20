@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css" rel="stylesheet">
 
   <title>Ajuda Pega</title>
 
@@ -26,6 +27,9 @@
           <li><a href="solucoesJava.html" title="Soluções Java" target="_self">Soluções Java</a></li>
           <li><a href="solucoesCSS.html" title="Soluções CSS" target="_self">Soluções CSS</a></li>
           <li><a href="solucoesHTML.html" title="Soluções HTML" target="_self">Soluções HTML</a></li>
+          <li><a href="servicoREST.html" title="Serviço REST" target="_self">Serviço REST</a></li>
+          <li><a href="ferramentaTracer.html" title="Ferramenta Tracer" target="_self">Ferramenta Tracer</a></li>
+
         </ul>
       </nav>
     </div><!--Box Artigo-->
@@ -34,22 +38,34 @@
       <h2>Soluções Java</h2>
       <br>
       <table style="width:90%;">
-        <td style="width:60%;"><img src="img/removeacento.png" alt="removeAcentuacao()"></td>
-        <td>A função <b>Remove Acentuacao</b> desenvolvido com um código JAVA foi criada para remover todos os
-          caracteres especiais do texto.</p>
-          <br><em><b>Código:</b>
-            <textarea rows=3 cols=100
-              readonly>return java.text.Normalizer.normalize(texto, java.text.Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", "");</textarea></em>
-        </td>
+        <tr>
+          <td style="width:60%;"><img src="img/removeacento.png" alt="removeAcentuacao()"></td>
+          <td>
+            <p>A função <b>Remove Acentuacao</b> desenvolvido com um código JAVA foi criada para remover todos os
+              caracteres especiais do texto.</p>
+          </td>
         </tr>
       </table>
+      <br><em><b>Código:</b></em>
       <br>
+      <pre
+        style="width:90%;"><code class="language-javascript">return java.text.Normalizer.normalize(texto, java.text.Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", "");</code></pre>
+      <br>
+
       <table style="width:90%;">
-        <td style="width:60%;"><img src="img/editvalidateemail.png" alt="editValidateEmail()"></td>
-        <td>A função <b>Edit Validate de E-mail</b> desenvolvido com um código JAVA foi criada para validar o campo de
-          e-mail.</p>
-          <br><em><b>Código:</b>
-            <textarea rows=10 cols=100 readonly>try{
+        <tr>
+          <td style="width:60%;"><img src="img/editvalidateemail.png" alt="editValidateEmail()"></td>
+          <td>
+            <p>A função <b>Edit Validate de E-mail</b> desenvolvido com um código JAVA foi criada para validar o campo
+              de
+              e-mail.</p>
+          </td>
+        </tr>
+      </table>
+      <br><em><b>Código:</b></em>
+      <br>
+      <pre class="codigoCSS"><code class="language-javascript">
+try{
   String pattern = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"+ "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 // Create a Pattern object
 java.util.regex.Pattern r = java.util.regex.Pattern.compile(pattern);
@@ -63,17 +79,24 @@ if (m.find( )) {
   else {
          System.out.println("NO MATCH");
   return false;}
-}catch(Exception e){return false;}</textarea></em>
-        </td>
+}catch(Exception e){return false;}
+      </code></pre>
+      <br>
+
+      <table style="width:90%;">
+        <tr>
+          <td style="width:60%;"><img src="img/editvalidatewhatsapp.png" alt="editValidateWhatsapp()"></td>
+          <td>
+            <p>A função <b>Edit Validate de Whatsapp</b> desenvolvido com um código JAVA foi criada para validar o campo
+              de
+              Whatsapp.</p>
+          </td>
         </tr>
       </table>
+      <br><em><b>Código:</b></em>
       <br>
-      <table style="width:90%;">
-        <td style="width:60%;"><img src="img/editvalidatewhatsapp.png" alt="editValidateWhatsapp()"></td>
-        <td>A função <b>Edit Validate de Whatsapp</b> desenvolvido com um código JAVA foi criada para validar o campo de
-          Whatsapp.</p><br>
-          <div class="conteudo"><em><b>Código:</b>
-              <textarea rows=10 cols=100 readonly>try{
+      <pre class="codigoCSS"><code class="language-javascript">
+try{
   String value = "";
   value  = theValue.replace("(","").replace(")","").replace("-","").replace(" ","");  
   java.util.regex.Pattern p = java.util.regex.Pattern.compile("(\\D)");
@@ -118,24 +141,39 @@ if (m.find( )) {
            }catch(Exception e){
   				theProperty.addMessage("Número de Telefone inválido.");          
   				return false;
-        }</textarea></em>
-        </td>
+        }
+</code></pre><br>
+      <table style="width:90%;">
+        <tr>
+          <td style="width:60%;"><img src="img/tratalistadinamica.png" alt="Trata Lista Dinâmica()"></td>
+          <td>
+            <p>A função <b>Trata Lista Dinâmica</b> desenvolvido com um código JAVA foi criada para tratar a lista
+              dinâmica, no exemplo a "Lista2" retornada no response do serviço pode vim com qualquer valor. Desta forma,
+              é necessário salvar para fazer comparações dentro do pega.</p>
+          </td>
         </tr>
       </table>
-      <br>
       <table style="width:90%;">
-        <td style="width:60%;"><img src="img/tratalistadinamica.png" alt="Trata Lista Dinâmica()"></td>
-        <td>A função <b>Trata Lista Dinâmica</b> desenvolvido com um código JAVA foi criada para tratar a lista
-          dinâmica, no exemplo a "Lista2" retornada no response do serviço pode vim com qualquer valor. Desta forma, é
-          necessário salvar para fazer comparações dentro do pega.</p>
-          <br><em><b>Exemplo:</b>
-            <textarea rows=5 cols=100 readonly>"Lista": [{
-            "Lista2": [
-                "Valor1",
-                "Valor2"
-            ]}</textarea></em>
-          <br><em><b>Código:</b>
-            <textarea rows=10 cols=100 readonly>ClipboardProperty response_GET = tools.getStepPage().getProperty("response_GET");
+        <tr>
+          <td>
+            <br><em><b>Exemplo:</b></em>
+            <br>
+            <pre class="codigoCSS"><code class="language-javascript">
+"Lista": [
+    {
+    "Lista2": [
+    "Valor1",
+    "Valor2"
+                            
+        ]
+    }  
+  </code></pre><br>
+          </td>
+          <td>
+            <br><em><b>Código:</b></em>
+            <br>
+            <pre class="codigoCSS"><code class="language-javascript">
+ClipboardProperty response_GET = tools.getStepPage().getProperty("response_GET");
 ClipboardProperty Lista = response_GET.getProperty("Lista");
 ClipboardPage NovaLista = tools.getStepPage().getPage("NovaLista");
 NovaLista.putString("pxObjClass", "Code-Pega-List");
@@ -157,24 +195,32 @@ for (int i = 1; i <= ListaSize; i++) {
     NovaList.putString("pyLabel", prop);
         ClipboardProperty listaProdutos = NovaList.getProperty("pxResults");
         ClipboardProperty lista = ComparaLista.getIfPresent(prop);
-        Iterator<ClipboardProperty> listaIterator = lista.iterator();
+        Iterator&lt;ClipboardProperty> listaIterator = lista.iterator();
     while (listaIterator.hasNext()) {
             ClipboardProperty produto = listaIterator.next();
             String produtoCodigo = produto.getStringValue("pyValue");
             ClipboardPage produtoMapeado = listaProdutos.getPageValue(ClipboardProperty.LIST_APPEND);
       produtoMapeado.putString("pxObjClass", "@baseclass");
             produtoMapeado.putString("pyValue", produtoCodigo);
-        }}}</textarea></em>
-        </td>
+        }}}
+      </code></pre><br>
+          </td>
+        </tr>
+      </table><br>
+
+      <table style="width:90%;">
+        <tr>
+          <td style="width:60%;"><img src="img/copiadethread.png" alt="copiaDeThread()"></td>
+          <td>
+            <p>A função <b>Copia de Thread</b> desenvolvido com um código JAVA foi criada para copiar lista e
+              propriedade
+              de uma thread para outra.</p>
+          </td>
         </tr>
       </table>
-      <br>
-      <table style="width:90%;">
-        <td style="width:60%;"><img src="img/copiadethread.png" alt="copiaDeThread()"></td>
-        <td>A função <b>Copia de Thread</b> desenvolvido com um código JAVA foi criada para copiar lista e propriedade
-          de uma thread para outra.</p>
-          <br><em><b>Código:</b>
-            <textarea rows=10 cols=100 readonly>boolean existeOpenPortal = tools.getRequestor().getThread("OpenPortal") != null;
+      <br><em><b>Código:</b></em>
+      <pre class="codigoCSS"><code class="language-javascript">
+boolean existeOpenPortal = tools.getRequestor().getThread("OpenPortal") != null;
 boolean existeStandard   = tools.getRequestor().getThread("STANDARD") != null;
 String TerminalSelecionado;
 
@@ -191,26 +237,26 @@ ClipboardPage page = tools.getRequestor().getThread(TerminalSelecionado).getPage
 ClipboardPage page1 = page.getPage("ListaExemploInterna");
 ClipboardPage page2 = tools.getRequestor().getThread(TerminalSelecionado).getPage("ListaExemploCopiada");
 ((com.pega.pegarules.priv.context.PegaThread)tools.getThread()).getPage("ListaExemploCopiada").getProperty("PropriedadeNova").setValue(page1.getProperty("PropriedadeAntiga"));
-</textarea></em>
-        </td>
-        </tr>
-      </table>
-      <br>
+</code></pre><br>
+
       <table style="width:90%;">
-        <td style="width:60%;">
-          <iframe width="100%" height="344"
-            src="https://players.brightcove.net/1519050010001/obdhcLv77W_default/index.html?videoId=5752178029001"
-            frameborder="0" allowfullscreen></iframe>
-        </td>
-        <td>A função <b>Debug Java</b> usado para depurar Java em Activity e Rule-Utility-Functions.</p>
-          <br><em><b>Código:</b>
-            <textarea rows=3 cols=100
-              readonly>pega_rules_utilities.sendDebugMessageToTracer("MENSAGEM", "<RULESET>");</textarea></em>
-        </td>
+        <tr>
+          <td style="width:60%;">
+            <iframe width="100%" height="344"
+              src="https://players.brightcove.net/1519050010001/obdhcLv77W_default/index.html?videoId=5752178029001"
+              frameborder="0" allowfullscreen></iframe>
+          </td>
+          <td>
+            <p>A função <b>Debug Java</b> usado para depurar Java em Activity e Rule-Utility-Functions.</p>
+          </td>
         </tr>
       </table>
+      <br><em><b>Código:</b></em>
+      <pre
+        style="width:90%;"><code class="language-javascript">pega_rules_utilities.sendDebugMessageToTracer("MENSAGEM", "&lt;RULESET>");</code></pre>
+      <br>
     </div>
-    <br><br><br><br><br><br><br><br>
+    <br><br>
   </main>
 
   <footer class="main_footer container">
@@ -224,6 +270,7 @@ ClipboardPage page2 = tools.getRequestor().getThread(TerminalSelecionado).getPag
 
   <script src="js/jquery.js"></script>
   <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
 </body>
 
 </html>

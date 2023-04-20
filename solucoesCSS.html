@@ -3,153 +3,181 @@
 
 <head>
 
-	<meta charset="utf-8">
-	<meta http-equiv="content-language" content="pt-br" />
+  <meta charset="utf-8">
+  <meta http-equiv="content-language" content="pt-br" />
 
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css" rel="stylesheet">
 
-	<title>Ajuda Pega</title>
+  <title>Ajuda Pega</title>
 
 </head>
 
 <body>
 
 
-	<main class="main_content container">
+  <main class="main_content container">
 
-		<div class="box-artigo">
-			<nav class="menu">
-				<ul>
-					<li><a href="index.html" title="Home" target="_self">Home</a></li>
-					<li><a href="funcoes.html" title="Funções" target="_self">Funções</a></li>
-					<li><a href="solucoesJava.html" title="Soluções Java" target="_self">Soluções Java</a></li>
-					<li><a href="solucoesCSS.html" title="Soluções CSS" target="_self">Soluções CSS</a></li>
-					<li><a href="solucoesHTML.html" title="Soluções HTML" target="_self">Soluções HTML</a></li>
-				</ul>
-			</nav>
-		</div><!--Box Artigo-->
+    <div class="box-artigo">
+      <nav class="menu">
+        <ul>
+          <li><a href="index.html" title="Home" target="_self">Home</a></li>
+          <li><a href="funcoes.html" title="Funções" target="_self">Funções</a></li>
+          <li><a href="solucoesJava.html" title="Soluções Java" target="_self">Soluções Java</a></li>
+          <li><a href="solucoesCSS.html" title="Soluções CSS" target="_self">Soluções CSS</a></li>
+          <li><a href="solucoesHTML.html" title="Soluções HTML" target="_self">Soluções HTML</a></li>
+          <li><a href="servicoREST.html" title="Serviço REST" target="_self">Serviço REST</a></li>
+          <li><a href="ferramentaTracer.html" title="Ferramenta Tracer" target="_self">Ferramenta Tracer</a></li>
 
-		<div style="padding-left:30px">
-			<h2>Soluções CSS</h2>
-			<br>
-			<b>Icone Personalizado</b> <img src="img/icone personalizado.png" width alt="Icone Personalizado"> usado
-			para criar um novo icone de contador, onde foi adicionado uma propriedade para ser exibida.<br>
-			<em><b>Código:</b> <textarea rows=10 cols=100 readonly><%
-String initialsClass = "Classe";
-String name= tools.findPage("Page").getProperty("Propriedade").toString();
-String sWidth = "14px";
-String sHeight = "14px";
+        </ul>
+      </nav>
+    </div><!--Box Artigo-->
+
+    <div style="padding-left:30px">
+      <h2>Soluções CSS</h2>
+      <br>
+      <b>Icone Personalizado</b> <img src="img/icone personalizado.png" width alt="Icone Personalizado"> usado
+      para criar um novo icone de contador, onde foi adicionado uma propriedade para ser exibida.<br>
+      <em><b>Código:</b></em><br>
+      <pre class="codigoCSS"><code class="language-javascript">
+<%
+  String initialsClass = "Oi-NovaFibra-Oferta";
+  String name = tools.findPage("pyWorkPage.NovaFibra").getProperty(".OfertaAtendimento.ContServicosAdicionais").toString();
+  String sWidth = "14px";
+  String sHeight = "14px";
 %>
-<i class='icons avatar <%=initialsClass%> <%=StringUtils.crossScriptingFilter(tools.getParamValue("class"))%>'style="width: <%=sWidth%>; height: <%=sHeight%>; "title='<%=name%>'>
-<svg viewBox="0 0 100 100" pointer-events="none" xmlns="http://www.w3.org/2000/svg" >
-<circle cx="50" cy="50" r="50"/>
-<text x="49%" y="75%" font-style="normal" font-weight="normal" font-family="Arial, Helvetica, sans-serif" pointer-events="auto" text-anchor="middle" fill="white" font-size="70"><%=name%></text>
-</svg>
-</i></textarea></em>
-			<br><br>
-			<b>Centered customizado</b> usado para centralizar todos os componentes do pega.<br>
-			<em><b>Código:</b> <textarea rows=10 cols=100 readonly>.centered {
-text-align: center;
-vertical-align:middle;
-margin: auto;
-align-items: center;
-justify-content: center;
-}</textarea></em>
-			<br><br>
-			<b>Tamanho Tela</b> adicionando tamanho minimo e máximo da tela com CSS.<br>
-			<em><b>Código:</b> <textarea rows=10 cols=100 readonly>@media all and (min-width: 1024px) {
-    .DLExternoResponsivo {
-        width: 944px !important;
-        margin: 0 auto;
-    }}
+
+&lt;i class='icons avatar <%=initialsClass%> <%=StringUtils.crossScriptingFilter(tools.getParamValue("class"))%>' style="width: <%=sWidth%>; height: <%=sHeight%>; " title='<%=name%>'>
+&lt;svg viewBox="0 0 100 100" pointer-events="none" xmlns="http://www.w3.org/2000/svg" >
+&lt;circle cx="50" cy="50" r="50" />
+&lt;text x="49%" y="75%" font-style="normal" font-weight="normal" font-family="Arial, Helvetica, sans-serif" pointer-events="auto" text-anchor="middle" fill="white" font-size="70"><%=name%></text>
+&lt;/svg>
+&lt;/i>
+			</code></pre>
+
+      <br><br>
+      <b>Centered customizado</b> usado para centralizar todos os componentes do pega.<br>
+      <em><b>Código:</b></em> <br>
+      <pre class="codigoCSS"><code class="language-css">	
+.centered {
+  text-align: center;
+  vertical-align: middle;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+</code></pre>
+      <br><br>
+      <b>Tamanho Tela</b> adicionando tamanho minimo e máximo da tela com CSS.<br>
+      <em><b>Código:</b><br></em>
+      <pre class="codigoCSS"><code class="language-css">	
+@media all and (min-width: 1024px) {
+  .DLExternoResponsivo {
+    width: 944px !important;
+    margin: 0 auto;
+  }
+}
+
 @media all and (max-width: 1023px) {
-    .DLExternoResponsivo {
-        width: 750px !important;
-        margin: 0 auto;
-    }}</textarea></em>
-			<br><br>
-			<b>Novas Fontes</b> adicionando novas fontes ao pega.<br>
-			1- Deve importar os respectivos arquivos binários de cada fonte no diretório webwb e com o tipo
-			correspondente.<br>
-			2- Adicionar um nova folha de estilo e adicionar na Skin, na aba Included styles com a seguinte
-			estrutura:<br>
-			<em><b>Código:</b> <textarea rows=10 cols=100 readonly>@font-face {
-	font-family: 'NomeFonte';
-	src: url('webwb/NomeFonte.eot?');
-	src: url('webwb/NomeFonte.eot?#iefix') format('embedded-opentype'),
-		url('webwb/NomeFonte.woff?') format('woff'),
-		url('webwb/NomeFonte.ttf?') format('truetype'),
-		url('webwb/NomeFonte.svg?#NomeFonte') format('svg');
-	font-weight: normal;
-	font-style: normal; 
-}
-@font-face {
-	font-family: 'NomeFonteBold';
-	src: url('webwb/NomeFonteBold.eot?');
-	src: url('webwb/NomeFonteBold.eot?#iefix') format('embedded-opentype'),
-		url('webwb/NomeFonteBold.woff?') format('woff'),
-		url('webwb/NomeFonteBold.ttf?') format('truetype'),
-		url('webwb/NomeFonteBold.svg?#NomeFonteBold') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'NomeFonteLight';
-	src: url('webwb/NomeFonteLight.eot?');
-	src: url('webwb/NomeFonteLight.eot?#iefix') format('embedded-opentype'),
-		url('webwb/NomeFonteLight.woff?') format('woff'),
-		url('webwb/NomeFonteLight.ttf?') format('truetype'),
-		url('webwb/NomeFonteLight.svg?#NomeFonteLight') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'NomeFonteHeadline';
-	src: url('webwb/SimplonOiHeadline.eot?');
-	src: url('webwb/SimplonOiHeadline.eot?#iefix') format('embedded-opentype'),
-		url('webwb/SimplonOiHeadline.woff?') format('woff'),
-		url('webwb/SimplonOiHeadline.ttf?') format('truetype'),
-		url('webwb/SimplonOiHeadline.svg?#SimplonOiHeadline') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'NomeFonteMedium';
-	src: url('webwb/NomeFonteMedium.eot?');
-	src: url('webwb/NomeFonteMedium.eot?#iefix') format('embedded-opentype'),
-		url('webwb/NomeFonteMedium.woff?') format('woff'),
-		url('webwb/NomeFonteMedium.ttf?') format('truetype'),
-		url('webwb/NomeFonteMedium.svg?#NomeFonteMedium') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'NomeFonteRegular';
-	src: url('webwb/NomeFonteRegular.eot?');
-	src: url('webwb/NomeFonteRegular.eot?#iefix') format('embedded-opentype'),
-		url('webwb/NomeFonteRegular.woff?') format('woff'),
-		url('webwb/NomeFonteRegular.ttf?') format('truetype'),
-		url('webwb/NomeFonteRegular.svg?#NomeFonteRegular') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}</textarea></em>
-		</div>
+  .DLExternoResponsivo {
+    width: 750px !important;
+    margin: 0 auto;
+  }
+}	
+</code></pre>
+      <br><br>
 
-		<br><br><br><br><br><br><br><br>
-	</main>
+      <b>Novas Fontes</b> adicionando novas fontes ao pega.<br>
+      1- Deve importar os respectivos arquivos binários de cada fonte no diretório webwb e com o tipo
+      correspondente.<br>
+      2- Adicionar um nova folha de estilo e adicionar na Skin, na aba Included styles com a seguinte
+      estrutura:<br>
+      <em><b>Código:</b></em><br>
+      <pre class="codigoCSS"><code class="language-css">		
+@font-face {
+  font-family: 'NomeFonte';
+  src: url('webwb/NomeFonte.eot?');
+  src: url('webwb/NomeFonte.eot?#iefix') format('embedded-opentype'),
+    url('webwb/NomeFonte.woff?') format('woff'),
+    url('webwb/NomeFonte.ttf?') format('truetype'),
+    url('webwb/NomeFonte.svg?#NomeFonte') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
-	<footer class="main_footer container">
-		<div class="main_footer_copy">
+@font-face {
+  font-family: 'NomeFonteBold';
+  src: url('webwb/NomeFonteBold.eot?');
+  src: url('webwb/NomeFonteBold.eot?#iefix') format('embedded-opentype'),
+    url('webwb/NomeFonteBold.woff?') format('woff'),
+    url('webwb/NomeFonteBold.ttf?') format('truetype'),
+    url('webwb/NomeFonteBold.svg?#NomeFonteBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
-			<p class="m-b-footer"> Rayane Morais - 2023, todos os direitos reservados.</p>
-			<p class="by"><i class="icon icon-heart-3"></i> Desenvolvido por: Rayane Morais</p>
+@font-face {
+  font-family: 'NomeFonteLight';
+  src: url('webwb/NomeFonteLight.eot?');
+  src: url('webwb/NomeFonteLight.eot?#iefix') format('embedded-opentype'),
+    url('webwb/NomeFonteLight.woff?') format('woff'),
+    url('webwb/NomeFonteLight.ttf?') format('truetype'),
+    url('webwb/NomeFonteLight.svg?#NomeFonteLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
-		</div>
-	</footer>
+@font-face {
+  font-family: 'NomeFonteHeadline';
+  src: url('webwb/SimplonOiHeadline.eot?');
+  src: url('webwb/SimplonOiHeadline.eot?#iefix') format('embedded-opentype'),
+    url('webwb/SimplonOiHeadline.woff?') format('woff'),
+    url('webwb/SimplonOiHeadline.ttf?') format('truetype'),
+    url('webwb/SimplonOiHeadline.svg?#SimplonOiHeadline') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
-	<script src="js/jquery.js"></script>
-	<script src="js/script.js"></script>
+@font-face {
+  font-family: 'NomeFonteMedium';
+  src: url('webwb/NomeFonteMedium.eot?');
+  src: url('webwb/NomeFonteMedium.eot?#iefix') format('embedded-opentype'),
+    url('webwb/NomeFonteMedium.woff?') format('woff'),
+    url('webwb/NomeFonteMedium.ttf?') format('truetype'),
+    url('webwb/NomeFonteMedium.svg?#NomeFonteMedium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NomeFonteRegular';
+  src: url('webwb/NomeFonteRegular.eot?');
+  src: url('webwb/NomeFonteRegular.eot?#iefix') format('embedded-opentype'),
+    url('webwb/NomeFonteRegular.woff?') format('woff'),
+    url('webwb/NomeFonteRegular.ttf?') format('truetype'),
+    url('webwb/NomeFonteRegular.svg?#NomeFonteRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+</code></pre>
+      <br><br>
+    </div>
+    <br><br>
+  </main>
+
+  <footer class="main_footer container">
+    <div class="main_footer_copy">
+
+      <p class="m-b-footer"> Rayane Morais - 2023, todos os direitos reservados.</p>
+      <p class="by"><i class="icon icon-heart-3"></i> Desenvolvido por: Rayane Morais</p>
+
+    </div>
+  </footer>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
 </body>
 
 </html>

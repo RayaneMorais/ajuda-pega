@@ -8,6 +8,7 @@
 
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css" rel="stylesheet">
 
 	<title>Ajuda Pega</title>
 
@@ -26,39 +27,74 @@
 					<li><a href="solucoesJava.html" title="Soluções Java" target="_self">Soluções Java</a></li>
 					<li><a href="solucoesCSS.html" title="Soluções CSS" target="_self">Soluções CSS</a></li>
 					<li><a href="solucoesHTML.html" title="Soluções HTML" target="_self">Soluções HTML</a></li>
+					<li><a href="servicoREST.html" title="Serviço REST" target="_self">Serviço REST</a></li>
+					<li><a href="ferramentaTracer.html" title="Ferramenta Tracer" target="_self">Ferramenta Tracer</a></li>
+
 				</ul>
 			</nav>
 		</div><!--Box Artigo-->
 
 		<div style="padding-left:30px">
-			<h2>Soluções CSS</h2>
+			<h2>Soluções HTML</h2>
 			<br>
 			<b>Chama When</b><br>
-			<em>Código: <textarea rows=1 cols=100 readonly><pega:when test="NomeWhen"></pega:when></textarea></em>
+			<em>Código:</em>
+			<pre
+				class="codigoHTML"><code class="language-html">&lt;pega:when test="NomeWhen">&lt;/pega:when></code></pre>
 			<br><br>
 			<b>Chama Section</b><br>
-			<em>Código: <textarea rows=1 cols=100
-					readonly><pega:include name="NomeSection" type="Rule-HTML-Section"></pega:include></textarea></em>
+			<em>Código:</em>
+			<pre
+				class="codigoHTML"><code class="language-html">&lt;pega:include name="NomeSection" type="Rule-HTML-Section">&lt;/pega:include></code></pre>
 			<br><br>
 			<b>Chama Paragrafo</b><br>
-			<em>Código: <textarea rows=1 cols=100
-					readonly><pega:include name="NomeParagrafo" type="Rule-HTML-Paragraph"></pega:include></textarea></em>
+			<em>Código:</em>
+			<pre
+				class="codigoHTML"><code class="language-html">&lt;pega:include name="NomeParagrafo" type="Rule-HTML-Paragraph">&lt;/pega:include></code></pre>
 			<br><br>
 			<b>Chama Property</b><br>
-			<em>Código: <textarea rows=1 cols=100
-					readonly><pega:reference name=".NomePropriedade"></pega:reference></textarea></em>
+			<em>Código:</em>
+			<pre
+				class="codigoHTML"><code class="language-html">&lt;pega:reference name=".NomePropriedade">&lt;/pega:reference></code></pre>
 			<br><br>
 			<b>Chama Lista</b><br>
-			<em>Código: <textarea rows=7 cols=100 readonly><pega:forEach name="Lista.pxResults">
-<tr>
-<td style='border-radius: 5px;border: 1px solid #0870b9; padding: 15px;text-align: left;vertical-align: middle;width: 60%;'> <pega:reference name="$THIS.Name" /> </td>
-<td style='border-radius: 5px;border: 1px solid #0870b9; padding: 15px;text-align: left;vertical-align: middle;width: 20%;'> <pega:reference name="$THIS.Value" /> </td>
-<td style='border-radius: 5px;border: 1px solid #0870b9; padding: 15px;text-align: left;vertical-align: middle;width: 20%;'>  <pega:reference name="$THIS.Height" /> </td>
-</tr>        
-</pega:forEach></textarea></em>
-		</div>
+			<em>Código:</em>
+			<pre class="codigoCSS"><code class="language-html">
+&lt;pega:forEach name="Lista.pxResults">
+&lt;tr>
+&lt;td style='border-radius: 5px;border: 1px solid #0870b9; padding: 15px;text-align: left;vertical-align: middle;width: 60%;'> &lt;pega:reference name="$THIS.Name" /> &lt;/td>
+&lt;td style='border-radius: 5px;border: 1px solid #0870b9; padding: 15px;text-align: left;vertical-align: middle;width: 20%;'> &lt;pega:reference name="$THIS.Value" /> &lt;/td>
+&lt;td style='border-radius: 5px;border: 1px solid #0870b9; padding: 15px;text-align: left;vertical-align: middle;width: 20%;'>  &lt;pega:reference name="$THIS.Height" /> &lt;/td>
+&lt;/tr>
+&lt;/pega:forEach></code></pre>
+		<br><br>
+			<b>Lógica Header</b><br>
+			<em>Código:</em>
+			<pre
+				class="codigoCSS"><code class="language-html">
+&lt;pd4ml:page.header height=30 scope="1">
+&lt;p>Primeira Tela&lt;/p>
+&lt;/pd4ml:page.header>
 
-		<br><br><br><br><br><br><br><br>
+&lt;pd4ml:page.header height=30 scope="2+">
+&lt;p>Segunda Tela em diante&lt;/p>
+&lt;/pd4ml:page.header>
+</code></pre>
+	<br><br>
+	<b>Lógica Footer</b><br>
+	<em>Código:</em>
+	<pre
+		class="codigoCSS"><code class="language-html">
+&lt;pd4ml:page.footer height=30 scope="1">
+&lt;p>Primeira Tela&lt;/p>
+&lt;/pd4ml:page.footer>
+
+&lt;pd4ml:page.footer height=30 scope="2+">
+&lt;p>Segunda Tela em diante&lt;/p>
+&lt;/pd4ml:page.footer>
+</code></pre>
+<br><br>
+</div>
 	</main>
 
 	<footer class="main_footer container">
@@ -72,6 +108,7 @@
 
 	<script src="js/jquery.js"></script>
 	<script src="js/script.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
 </body>
 
 </html>

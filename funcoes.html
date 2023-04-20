@@ -8,7 +8,7 @@
 
   <link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css" rel="stylesheet">
   <title>Ajuda Pega</title>
 
 </head>
@@ -26,6 +26,9 @@
           <li><a href="solucoesJava.html" title="Soluções Java" target="_self">Soluções Java</a></li>
           <li><a href="solucoesCSS.html" title="Soluções CSS" target="_self">Soluções CSS</a></li>
           <li><a href="solucoesHTML.html" title="Soluções HTML" target="_self">Soluções HTML</a></li>
+          <li><a href="servicoREST.html" title="Serviço REST" target="_self">Serviço REST</a></li>
+					<li><a href="ferramentaTracer.html" title="Ferramenta Tracer" target="_self">Ferramenta Tracer</a></li>
+
         </ul>
       </nav>
     </div><!--Box Artigo-->
@@ -38,312 +41,354 @@
           <td><b>replaceAll()</b> usado para substituir todas as ocorrências da String selecionada por outra. O padrão
             pode ser uma string ou uma RegExp, e a substituição pode ser uma String ou uma função a ser chamada para
             cada ocorrência.
-            <br><em><b>Exemplo:</b> <textarea rows=1 cols=100
-                readonly>@String.replaceAll(Param.Teste,"ABC","DEF")</textarea></em>
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript" id="input">@String.replaceAll(Param.Teste,"ABC","DEF")</code></pre><br>
           </td>
         </tr>
+      </table>
+      <br>
+      <table style="width:90%;">
         <tr>
-      </table>
-      <br>
-      <table style="width:90%;">
-        <td style="width:500px;"><img src="img/pxStringCSVFromPageList.png" width alt="pxStringCSVFromPageList()"></td>
-        <td><b>pxStringCSVFromPageList()</b> usa dois parâmetros de entrada, uma propriedade Pagelist e uma
-          propertyName, serve para transformar a lista em uma String.
-          <br><em><b>Exemplo:</b> <textarea rows=1 cols=100
-              readonly>@pxStringCSVFromPageList(Lista.pxResults,"STS_FILTRO")</textarea></em>
-        </td>
-        </td>
+          <td style="width:500px;"><img src="img/pxStringCSVFromPageList.png" width alt="pxStringCSVFromPageList()">
+          </td>
+          <td><b>pxStringCSVFromPageList()</b> usa dois parâmetros de entrada, uma propriedade Pagelist e uma
+            propertyName, serve para transformar a lista em uma String.
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript">@pxStringCSVFromPageList(Lista.pxResults,"STS_FILTRO")</code></pre>
+            <br>
+          </td>
         </tr>
       </table>
       <br>
       <table style="width:90%;">
-        <td style="width:500px;"><img src="img/IsInPageList.png" width alt="IsInPageList()"></td>
-        <td><b>IsInPageList()</b> Retorna true, se o valor que foi passado como input estiver na propriedade que está na
-          pagelist e false caso contrário.
-          <br><em><b>Exemplo:</b> <textarea rows=1 cols=100
-              readonly>@IsInPageList(.PropertyValue,"Value",Pagelist)</textarea></em>
-        </td>
-        </td>
+        <tr>
+          <td style="width:500px;"><img src="img/IsInPageList.png" width alt="IsInPageList()"></td>
+          <td><b>IsInPageList()</b> Retorna true, se o valor que foi passado como input estiver na propriedade que está
+            na
+            pagelist e false caso contrário.
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript">@IsInPageList(.PropertyValue,"Value",Pagelist)</code></pre><br>
+          </td>
         </tr>
       </table>
       <br>
       <table style="width:90%;">
-        <td style="width:500px;"><img src="img/IsInPageListWhen.png" width alt="IsInPageListWhen()"></td>
-        <td><b>IsInPageListWhen()</b> Retorne true, quando qualquer página tiver a correspondência.
-          <br><em><b>Exemplo:</b> <textarea rows=1 cols=100
-              readonly>@IsInPageListWhen(WhenName,Pagelist)</textarea></em>
-        </td>
-        </td>
+        <tr>
+          <td style="width:500px;"><img src="img/IsInPageListWhen.png" width alt="IsInPageListWhen()"></td>
+          <td><b>IsInPageListWhen()</b> Retorne true, quando qualquer página tiver a correspondência.
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript">@IsInPageListWhen(WhenName,Pagelist)</code></pre><br>
+          </td>
         </tr>
       </table>
       <br>
       <table style="width:90%;">
-        <td style="width:500px;"><img src="img/contains.png" width alt="contains()"></td>
-        <td><b>contains()</b> usado para procurar um caractere ou uma sequência de caracteres. Retorna verdadeiro se
-          encontrado e falso se não encontrou.
-          <br><em><b>Exemplo:</b> <textarea rows=1 cols=100 readonly>@contains(param.Teste,"abc")</textarea></em>
-        </td>
-        </td>
+        <tr>
+          <td style="width:500px;"><img src="img/contains.png" width alt="contains()"></td>
+          <td><b>contains()</b> usado para procurar um caractere ou uma sequência de caracteres. Retorna verdadeiro se
+            encontrado e falso se não encontrou.
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript">@contains(param.Teste,"abc")</code></pre><br>
+          </td>
         </tr>
       </table>
       <br>
       <table style="width:90%;">
-        <td style="width:500px;"><img src="img/containsIgnoreCase.png" width alt="containsIgnoreCase()"></td>
-        <td><b>containsIgnoreCase()</b> usado para procurar um caractere ou uma sequência de caracteres, sem fazer
-          distinção entre letras maiúsculas ou minúsculas.
-          <br><em><b>Exemplo:</b> <textarea rows=1 cols=100
-              readonly>@containsIgnoreCase(Param.Teste,"ABC")</textarea></em>
-        </td>
+        <tr>
+          <td style="width:500px;"><img src="img/containsIgnoreCase.png" width alt="containsIgnoreCase()"></td>
+          <td><b>containsIgnoreCase()</b> usado para procurar um caractere ou uma sequência de caracteres, sem fazer
+            distinção entre letras maiúsculas ou minúsculas.
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript">@containsIgnoreCase(Param.Teste,"ABC")</code></pre><br>
+          </td>
         </tr>
       </table>
       <br>
       <table style="width:90%;">
-        <td style="width:500px;"><img src="img/equals.png" width alt="equals()"></td>
-        <td><b>equals()</b> usado para compara duas expressões para determinar se elas são iguais e retorna verdadeiro
-          ou falso.
-          <br><em><b>Exemplo:</b> <textarea rows=1 cols=100 readonly>@equals(param.Teste,"")</textarea></em>
-        </td>
+        <tr>
+          <td style="width:500px;"><img src="img/equals.png" width alt="equals()"></td>
+          <td><b>equals()</b> usado para compara duas expressões para determinar se elas são iguais e retorna verdadeiro
+            ou falso.
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript">@equals(param.Teste,"")</code></pre><br>
+          </td>
         </tr>
       </table>
       <br>
       <table style="width:90%;">
-        <td style="width:500px;"><img src="img/equalsIgnoreCase.png" width alt="equalsIgnoreCase()"></td>
-        <td><b>equalsIgnoreCase()</b> usado para quando quer comparar uma String, sem fazer distinção entre letras
-          maiúsculas ou minúsculas.
-          <br><em><b>Exemplo:</b> <textarea rows=1 cols=100
-              readonly>@equalsIgnoreCase(param.Teste,"aBc")</textarea></em>
-        </td>
+        <tr>
+          <td style="width:500px;"><img src="img/equalsIgnoreCase.png" width alt="equalsIgnoreCase()"></td>
+          <td><b>equalsIgnoreCase()</b> usado para quando quer comparar uma String, sem fazer distinção entre letras
+            maiúsculas ou minúsculas.
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript">@equalsIgnoreCase(param.Teste,"aBc")</code></pre><br>
+          </td>
         </tr>
       </table>
       <br>
       <table style="width:90%;">
-        <td style="width:500px;"><img src="img/countInPageList.png" width alt="countInPageList()"></td>
-        <td><b>countInPageList()</b> Retorna a contagem das páginas que têm a correspondência (propriedade).
-          <br><em><b>Exemplo:</b> <textarea rows=1 cols=100
-              readonly>@countInPageList("Value","PropertyName",Pagelist)</textarea></em>
-        </td>
-        </td>
+        <tr>
+          <td style="width:500px;"><img src="img/countInPageList.png" width alt="countInPageList()"></td>
+          <td><b>countInPageList()</b> Retorna a contagem das páginas que têm a correspondência (propriedade).
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript">@countInPageList("Value","PropertyName",Pagelist)</code></pre><br>
+          </td>
         </tr>
       </table>
       <br>
       <table style="width:90%;">
-        <td style="width:500px;"><img src="img/countInPageListWhen.png" width alt="countInPageListWhen()"></td>
-        <td><b>countInPageListWhen()</b> Retorna a contagem das páginas que têm a correspondência (when).
-          <br><em><b>Exemplo:</b> <textarea rows=1 cols=100
-              readonly>@countInPageListWhen("WhenName",Pagelist)</textarea></em>
-        </td>
-        </td>
+        <tr>
+          <td style="width:500px;"><img src="img/countInPageListWhen.png" width alt="countInPageListWhen()"></td>
+          <td><b>countInPageListWhen()</b> Retorna a contagem das páginas que têm a correspondência (when).
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript">@countInPageListWhen("WhenName",Pagelist)</code></pre><br>
+          </td>
         </tr>
       </table>
       <br>
       <table style="width:90%;">
-        <td style="width:500px;"><img src="img/IsInEachPageofList.png" width alt="IsInEachPageofList()"></td>
-        <td><b>IsInEachPageofList()</b> Retorna verdadeiro, se em todas as páginas contiver o valor exatamente igual com
-          a propriedade na Pagelist.
-          <br><em><b>Exemplo:</b> <textarea rows=1 cols=100
-              readonly>@IsInEachPageofList("PropriedadeOuValor","PropertydaPage",Pagelist)</textarea></em>
-        </td>
-        </td>
+        <tr>
+          <td style="width:500px;"><img src="img/IsInEachPageofList.png" width alt="IsInEachPageofList()"></td>
+          <td><b>IsInEachPageofList()</b> Retorna verdadeiro, se em todas as páginas contiver o valor exatamente igual
+            com
+            a propriedade na Pagelist.
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript">@IsInEachPageofList("PropriedadeOuValor","PropertydaPage",Pagelist)</code></pre>
+            <br>
+          </td>
         </tr>
       </table>
       <br>
       <table style="width:90%;">
-        <td style="width:500px;"><img src="img/IsInEachPageofListWhen.png" width alt="IsInEachPageofListWhen()"></td>
-        <td><b>IsInEachPageofListWhen()</b> Retorne true, se a condição when for avaliada como para cada página da lista
-          de páginas.
-          <br><em><b>Exemplo:</b> <textarea rows=1 cols=100
-              readonly>@IsInEachPageofListWhen("NomeWhen",Lista.pxResults)</textarea></em>
-        </td>
-        </td>
+        <tr>
+          <td style="width:500px;"><img src="img/IsInEachPageofListWhen.png" width alt="IsInEachPageofListWhen()"></td>
+          <td><b>IsInEachPageofListWhen()</b> Retorne true, se a condição when for avaliada como para cada página da
+            lista
+            de páginas.
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript">@IsInEachPageofListWhen("NomeWhen",Lista.pxResults)</code></pre><br>
+          </td>
         </tr>
       </table>
       <br>
       <table style="width:90%;">
-        <td style="width:500px;"><img src="img/SizeOfPropertyList.png" width alt="SizeOfPropertyList()"></td>
-        <td><b>SizeOfPropertyList()</b> usado para verificar o tamanho da lista de valores. Retorna verdadeiro ou falso.
-          <br><em><b>Exemplo:</b> <textarea rows=1 cols=100
-              readonly>@SizeOfPropertyList(ListaAccessGroups.pxResults)>0</textarea></em>
-        </td>
-        </td>
+        <tr>
+          <td style="width:500px;"><img src="img/SizeOfPropertyList.png" width alt="SizeOfPropertyList()"></td>
+          <td><b>SizeOfPropertyList()</b> usado para verificar o tamanho da lista de valores. Retorna verdadeiro ou
+            falso.
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript">@SizeOfPropertyList(ListaAccessGroups.pxResults)>0</code></pre><br>
+          </td>
         </tr>
       </table>
       <br>
       <table style="width:90%;">
-        <td style="width:500px;"><img src="img/LengthOfPageList.png" width alt="LengthOfPageList()"></td>
-        <td><b>LengthOfPageList()</b> usado para verificar o tamanho da page list.
-          <br><em><b>Exemplo:</b> <textarea rows=1 cols=100
-              readonly>@Utilities.LengthOfPageList(Page.Lista)</textarea></em>
-        </td>
-        </td>
+        <tr>
+          <td style="width:500px;"><img src="img/LengthOfPageList.png" width alt="LengthOfPageList()"></td>
+          <td><b>LengthOfPageList()</b> usado para verificar o tamanho da page list.
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript">@Utilities.LengthOfPageList(Page.Lista)</code></pre><br>
+          </td>
         </tr>
       </table>
       <br>
       <table style="width:90%;">
-        <td style="width:500px;"><img src="img/length.png" width alt="length()"></td>
-        <td><b>length()</b> usado para verificar a quantidade de caracteres.
-          <br><em><b>Exemplo:</b> <textarea rows=1 cols=100 readonly>@String.length(Param.Teste)</textarea></em>
-        </td>
+        <tr>
+          <td style="width:500px;"><img src="img/length.png" width alt="length()"></td>
+          <td><b>length()</b> usado para verificar a quantidade de caracteres.
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript">@String.length(Param.Teste)</code></pre><br>
+          </td>
         </tr>
       </table>
       <br>
       <table style="width:90%;">
-        <td style="width:500px;"><img src="img/IndexInPageList.png" width alt="IndexInPageList()"></td>
-        <td><b>IndexInPageList()</b> Retorna o índice da primeira entrada na Pagelist, quando qualquer página tiver a
-          correspondência (propriedade).
-          <br><em><b>Exemplo:</b> <textarea rows=1 cols=100
-              readonly>@IndexInPageList("ApplyJobs","pyLabel",D_ABC.pxResults)</textarea></em>
-        </td>
+        <tr>
+          <td style="width:500px;"><img src="img/IndexInPageList.png" width alt="IndexInPageList()"></td>
+          <td><b>IndexInPageList()</b> Retorna o índice da primeira entrada na Pagelist, quando qualquer página tiver a
+            correspondência (propriedade).
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript">@IndexInPageList("ApplyJobs","pyLabel",D_ABC.pxResults)</code></pre>
+            <br>
+          </td>
         </tr>
       </table>
       <br>
       <table style="width:90%;">
-        <td style="width:500px;"><img src="img/IndexInPageListWhen.png" width alt="IndexInPageListWhen()"></td>
-        <td><b>IndexInPageListWhen()</b> Retorna o índice da primeira entrada na Pagelist, quando qualquer página tiver
-          a correspondência (when). Retorne -1 quando nenhuma correspondência for encontrada.
-          <br><em><b>Exemplo:</b> <textarea rows=1 cols=100
-              readonly>@IndexInPageListWhen("IsAvailable",D_ABC.pxResults)</textarea></em>
-        </td>
+        <tr>
+          <td style="width:500px;"><img src="img/IndexInPageListWhen.png" width alt="IndexInPageListWhen()"></td>
+          <td><b>IndexInPageListWhen()</b> Retorna o índice da primeira entrada na Pagelist, quando qualquer página
+            tiver
+            a correspondência (when). Retorne -1 quando nenhuma correspondência for encontrada.
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript">@IndexInPageListWhen("IsAvailable",D_ABC.pxResults)</code></pre><br>
+          </td>
         </tr>
       </table>
       <br>
       <table style="width:90%;">
-        <td style="width:500px;"><img src="img/entrySatisfiesCondition.png" width alt="entrySatisfiesCondition()"></td>
-        <td><b>entrySatisfiesCondition()</b> Retorna verdadeiro se todos/algum dos valores atendem à comparação.
-          <br><em><b>Exemplo:</b> <textarea rows=1 cols=100
-              readonly>@entrySatisfiesCondition(Propriedade,"Comparador", Valor,"Opção")</textarea></em>
-        </td>
+        <tr>
+          <td style="width:500px;"><img src="img/entrySatisfiesCondition.png" width alt="entrySatisfiesCondition()">
+          </td>
+          <td><b>entrySatisfiesCondition()</b> Retorna verdadeiro se todos/algum dos valores atendem à comparação.
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript">@entrySatisfiesCondition(Propriedade,"Comparador", Valor,"Opção")</code></pre>
+            <br>
+          </td>
         </tr>
       </table>
       <br>
       <table style="width:90%;">
-        <td style="width:500px;"><img src="img/pxReplaceAllViaRegex.png" width alt="pxReplaceAllViaRegex()"></td>
-        <td><b>pxReplaceAllViaRegex()</b> usado para fazer pesquisa e substituição de correspondência de padrão no
-          texto.
-          <br><em><b>Exemplo:</b> <textarea rows=1 cols=100
-              readonly>@String.pxReplaceAllViaRegex(param.Teste,"[A-z]","")</textarea></em>
-        </td>
+        <tr>
+          <td style="width:500px;"><img src="img/pxReplaceAllViaRegex.png" width alt="pxReplaceAllViaRegex()"></td>
+          <td><b>pxReplaceAllViaRegex()</b> usado para fazer pesquisa e substituição de correspondência de padrão no
+            texto.
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript">@String.pxReplaceAllViaRegex(param.Teste,"[A-z]","")</code></pre><br>
+          </td>
         </tr>
       </table>
       <br>
       <table style="width:90%;">
-        <td style="width:500px;"><img src="img/pzGenerateUniqueID.png" width alt="pzGenerateUniqueID()"></td>
-        <td><b>pzGenerateUniqueID()</b> usado para gerar um código único com um prefixo inicial.
-          <br><em><b>Exemplo:</b> <textarea rows=1 cols=100 readonly>@pzGenerateUniqueID(tools,"PF")</textarea></em>
-        </td>
+        <tr>
+          <td style="width:500px;"><img src="img/pzGenerateUniqueID.png" width alt="pzGenerateUniqueID()"></td>
+          <td><b>pzGenerateUniqueID()</b> usado para gerar um código único com um prefixo inicial.
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript">@pzGenerateUniqueID(tools,"PF")</code></pre><br>
+          </td>
         </tr>
       </table>
       <br>
       <table style="width:90%;">
-        <td style="width:500px;"><img src="img/getDataSystemSetting.png" width alt="getDataSystemSetting()"></td>
-        <td><b>getDataSystemSetting()</b> usado para chamar/verificar DSS (Data System Setting).
-          <br><em><b>Exemplo:</b> <textarea rows=1 cols=100
-              readonly>@Utilities.getDataSystemSetting(Classe,NomeDSS)</textarea></em>
-        </td>
+        <tr>
+          <td style="width:500px;"><img src="img/getDataSystemSetting.png" width alt="getDataSystemSetting()"></td>
+          <td><b>getDataSystemSetting()</b> usado para chamar/verificar DSS (Data System Setting).
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript">@Utilities.getDataSystemSetting(Classe,NomeDSS)</code></pre><br>
+          </td>
         </tr>
       </table>
       <br>
       <table style="width:90%;">
-        <td style="width:500px;"><img src="img/pxExecuteAnActivity.png" width alt="pxExecuteAnActivity()"></td>
-        <td><b>pxExecuteAnActivity()</b> usado para chamar Activity dentro do Data Transform.
-          <br><em><b>Exemplo:</b> <textarea rows=1 cols=100
-              readonly>@Utilities.pxExecuteAnActivity(Classe, NomeActivity)</textarea></em>
-        </td>
+        <tr>
+          <td style="width:500px;"><img src="img/pxExecuteAnActivity.png" width alt="pxExecuteAnActivity()"></td>
+          <td><b>pxExecuteAnActivity()</b> usado para chamar Activity dentro do Data Transform.
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript">@Utilities.pxExecuteAnActivity(Classe, NomeActivity)</code></pre><br>
+          </td>
         </tr>
       </table>
       <br>
       <table style="width:90%;">
-        <td style="width:500px;"><img src="img/DecisionTable.png" width alt="DecisionTable.ObtainValue()"></td>
-        <td><b>DecisionTable.ObtainValue()</b> usado para chamar Decision Table dentro do Data Transform.
-          <br><em><b>Exemplo:</b> <textarea rows=1 cols=100
-              readonly>@DecisionTable.ObtainValue(tools,Classe,"NomeDecisionTable",true)</textarea></em>
-        </td>
+        <tr>
+          <td style="width:500px;"><img src="img/DecisionTable.png" width alt="DecisionTable.ObtainValue()"></td>
+          <td><b>DecisionTable.ObtainValue()</b> usado para chamar Decision Table dentro do Data Transform.
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript">@DecisionTable.ObtainValue(tools,Classe,"NomeDecisionTable",true)</code></pre>
+            <br>
+          </td>
         </tr>
       </table>
       <br>
       <table style="width:90%;">
-        <td style="width:500px;"><img src="img/CurrentDateTime.png" width alt="CurrentDateTime()"></td>
-        <td><b>CurrentDateTime()</b> usado para gerar data/hora atual no formato GMT.
-          <br><em><b>Exemplo:</b> <textarea rows=1 cols=100
-              readonly>@(Pega-RULES:DateTime).CurrentDateTime()</textarea></em>
-        </td>
+        <tr>
+          <td style="width:500px;"><img src="img/CurrentDateTime.png" width alt="CurrentDateTime()"></td>
+          <td><b>CurrentDateTime()</b> usado para gerar data/hora atual no formato GMT.
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript">@(Pega-RULES:DateTime).CurrentDateTime()</code></pre><br>
+          </td>
         </tr>
       </table>
       <br>
       <table style="width:90%;">
-        <td style="width:500px;"><img src="img/endsWith.png" width alt="endsWith()"></td>
-        <td><b>endsWith()</b> usado para verificar se corresponde aos últimos caracteres da String.
-          <br><em><b>Exemplo:</b> <textarea rows=1 cols=100 readonly>@endsWith(Param.Teste,":")</textarea></em>
-        </td>
+        <tr>
+          <td style="width:500px;"><img src="img/endsWith.png" width alt="endsWith()"></td>
+          <td><b>endsWith()</b> usado para verificar se corresponde aos últimos caracteres da String.
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript">@endsWith(Param.Teste,":")</code></pre><br>
+          </td>
         </tr>
       </table>
       <br>
       <table style="width:90%;">
-        <td style="width:500px;"><img src="img/concat.png" width alt="concat()"></td>
-        <td><b>concat()</b> usado para concatenar String.
-          <br><em><b>Exemplo:</b> <textarea rows=1 cols=100 readonly>@concat(Param.prefixo,Param.sufixo)</textarea></em>
-        </td>
+        <tr>
+          <td style="width:500px;"><img src="img/concat.png" width alt="concat()"></td>
+          <td><b>concat()</b> usado para concatenar String.
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript">@concat(Param.prefixo,Param.sufixo)</code></pre><br>
+          </td>
         </tr>
       </table>
       <br>
       <table style="width:90%;">
-        <td style="width:500px;"><img src="img/whatComesAfterLast.png" width alt="whatComesAfterLast()"></td>
-        <td><b>whatComesAfterLast()</b> usado para retornar tudo o que vem depois do valor fornecido.
-          <br><em><b>Exemplo:</b> <textarea rows=1 cols=100
-              readonly>@(Pega-RULES:String).whatComesAfterLast(Param.Teste, ':')</textarea></em>
-        </td>
+        <tr>
+          <td style="width:500px;"><img src="img/whatComesAfterLast.png" width alt="whatComesAfterLast()"></td>
+          <td><b>whatComesAfterLast()</b> usado para retornar tudo o que vem depois do valor fornecido.
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript">@(Pega-RULES:String).whatComesAfterLast(Param.Teste, ':')</code></pre>
+            <br>
+          </td>
         </tr>
       </table>
       <br>
       <table style="width:90%;">
-        <td style="width:500px;"><img src="img/whatComesBeforeFirst.png" width alt="whatComesBeforeFirst()"></td>
-        <td><b>whatComesBeforeFirst()</b> usado para retornar tudo o que vem antes do valor fornecido.
-          <br><em><b>Exemplo:</b> <textarea rows=1 cols=100
-              readonly>@(Pega-RULES:String).whatComesBeforeFirst(Param.Teste, ':')</textarea></em>
-        </td>
+        <tr>
+          <td style="width:500px;"><img src="img/whatComesBeforeFirst.png" width alt="whatComesBeforeFirst()"></td>
+          <td><b>whatComesBeforeFirst()</b> usado para retornar tudo o que vem antes do valor fornecido.
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript">@(Pega-RULES:String).whatComesBeforeFirst(Param.Teste, ':')</code></pre>
+            <br>
+          </td>
         </tr>
       </table>
       <br>
       <table style="width:90%;">
-        <td style="width:500px;"><img src="img/pxSortPageList.png" width alt="pxSortPageList()"></td>
-        <td><b>pxSortPageList()</b> Retorna a ordem de classificação na mesma pagelist.
-          <br><em><b>Exemplo:</b> <textarea rows=1 cols=100
-              readonly>@pxSortPageList(Pagelist.pxResults,"Propriedade","Opção")</textarea></em>
-        </td>
+        <tr>
+          <td style="width:500px;"><img src="img/pxSortPageList.png" width alt="pxSortPageList()"></td>
+          <td><b>pxSortPageList()</b> Retorna a ordem de classificação na mesma pagelist.
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript">@pxSortPageList(Pagelist.pxResults,"Propriedade","Opção")</code></pre>
+            <br>
+          </td>
         </tr>
       </table>
       <br>
       <table style="width:90%;">
-        <td style="width:500px;"><img src="img/RemoveDeletedObjects.png" width alt="RemoveDeletedObjects()"></td>
-        <td><b>RemoveDeletedObjects()</b> usado para excluir objetos dentro de um page list. Deve excluir todos que a
-          propriedade <em>.pyDeletedObject</em> for setada com o valor "true".
-          <br><em><b>Exemplo:</b> <textarea rows=1 cols=100
-              readonly>@RemoveDeletedObjects(Primary.Lista)</textarea></em>
-        </td>
+        <tr>
+          <td style="width:500px;"><img src="img/RemoveDeletedObjects.png" width alt="RemoveDeletedObjects()"></td>
+          <td><b>RemoveDeletedObjects()</b> usado para excluir objetos dentro de um page list. Deve excluir todos que a
+            propriedade <em>.pyDeletedObject</em> for setada com o valor "true".
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript">@RemoveDeletedObjects(Primary.Lista)</code></pre><br>
+          </td>
         </tr>
       </table>
       <br>
       <table style="width:90%;">
-        <td style="width:500px;"><img src="img/pzDeleteAllInstancesOfDeclarativePage.png" width
-            alt="pzDeleteAllInstancesOfDeclarativePage()"></td>
-        <td><b>pzDeleteAllInstancesOfDeclarativePage()</b> usado para excluir todas as instâncias do data page.
-          <br><em><b>Exemplo:</b> <textarea rows=2 cols=100
-              readonly>@(Pega-RULES:DeclarePages).pzDeleteAllInstancesOfDeclarativePage(tools, "D_Teste")</textarea></em>
-        </td>
+        <tr>
+          <td style="width:500px;"><img src="img/pzDeleteAllInstancesOfDeclarativePage.png" width alt="pzDeleteAllInstancesOfDeclarativePage()"></td>
+          <td><b>pzDeleteAllInstancesOfDeclarativePage()</b> usado para excluir todas as instâncias do data page.
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript">@(Pega-RULES:DeclarePages).pzDeleteAllInstancesOfDeclarativePage
+(tools, "D_Teste")</code></pre>
+            <br>
+          </td>
         </tr>
       </table>
       <br>
       <table style="width:90%;">
-        <td style="width:500px;"><img src="img/pxLogMessage.png" width alt="pxLogMessage()"></td>
-        <td><b>pxLogMessage()</b> Registra a mensagem para o nível especificado nos logs do pega (d, i, f, w, e). Depois
-          de executar a regra, pode ver o seguinte log no PegaRules.
-          <br><em><b>Exemplo:</b> <textarea rows=2 cols=100
-              readonly>@Default.pxLogMessage("Mensagem",'f')</textarea></em>
-        </td>
+        <tr>
+          <td style="width:500px;"><img src="img/pxLogMessage.png" width alt="pxLogMessage()"></td>
+          <td><b>pxLogMessage()</b> Registra a mensagem para o nível especificado nos logs do pega (d, i, f, w, e).
+            Depois
+            de executar a regra, pode ver o seguinte log no PegaRules.
+            <br><em><b>Exemplo:</b></em>
+            <pre><code class="language-javascript">@Default.pxLogMessage("Mensagem",'f')</code></pre><br>
+          </td>
         </tr>
       </table>
     </div>
-
-    <br><br><br><br><br><br><br><br>
+    <br><br>
   </main>
 
   <footer class="main_footer container">
@@ -357,6 +402,6 @@
 
   <script src="js/jquery.js"></script>
   <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
 </body>
-
 </html>

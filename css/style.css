@@ -1,62 +1,4 @@
-.content {
-    float: left;
-    width: 92%;
-    margin: 0 4%;
-    padding: 20px 0;
-}
-
-/*HEADER*/
-.main_header {
-    background: #ffffff;
-    border-bottom: 1px #f4f4f4 solid;
-    z-index: 1;
-    padding: 0.5em 0em;
-}
-
-.main_header .content {
-    float: left;
-    padding: 0px 0;
-}
-
-.fixed {
-    display: block;
-    position: fixed;
-    z-index: 9;
-}
-
-.main_header_logo {
-    text-align: center;
-    margin: auto;
-    float: none;
-    width: 138px;
-}
-
-.main_header_logo img {
-    height: 69px;
-}
-
 /*Seu Código*/
-.section-seu-codigo {
-    padding: 10px 0px;
-    background-color: #f4f4f4;
-}
-
-.section-seu-codigo .content {
-    float: left;
-    padding: 1em 0;
-}
-
-.section_title {
-    width: 100%;
-    float: left;
-    margin-bottom: 1em;
-    font-size: 1.3em;
-    font-weight: 300;
-    text-align: center;
-    border-bottom: 1px #eceaea solid;
-    padding-bottom: 1em;
-}
-
 .box-artigo {
     width: 100%;
     float: left;
@@ -67,8 +9,23 @@
 h2 {
     padding-top: 70px;
     text-align: center;
-    color: #00a4a6;
-    text-shadow: white 0.1em 0.1em 0.2em;
+    color: #202454;
+    text-shadow: #00a4a6 0.1em 0.1em 0.2em;
+}
+
+.codigoCSS{
+    width: 80%;
+    height: 300px;
+}
+
+.codigoHTML{
+    width: 80%;
+    height: 80px;
+}
+
+.codigoJAVA{
+    width: 50%;
+    height: 80px;
 }
 
 /*Menu*/
@@ -139,7 +96,7 @@ h2 {
 }
 
 .main_footer_copy {
-    background-color: #262626;
+    background-color: #202454;
     width: 100%;
     float: left;
     text-align: center;
@@ -233,3 +190,5 @@ h2 {
 @media (min-width:100em) {}
 
 /*Fecha o Responsivo*/
+
+
