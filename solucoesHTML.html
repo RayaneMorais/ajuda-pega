@@ -41,7 +41,20 @@
 			<b>Chama When</b><br>
 			<em>Código:</em>
 			<pre
-				class="codigoHTML"><code class="language-html">&lt;pega:when test="NomeWhen">&lt;/pega:when></code></pre>
+				class="codigoCSS">
+<code class="language-html">&lt;pega:choose>
+	&lt;pega:when test="NomeWhen">
+	&lt;!-- HTML or XML code to execute for first when -->
+	&lt;/pega:when>
+					
+	&lt;pega:when test="NomeWhen2">
+	&lt;!-- HTML or XML code to execute for second when -->
+	&lt;/pega:when>
+					
+	&lt;pega:otherwise>
+    &lt;!-- selected if no previous when tag evaluates to true -->
+	&lt;/pega:otherwise>				
+&lt;/pega:choose></code></pre>
 			<br><br>
 			<b>Chama Section</b><br>
 			<em>Código:</em>
