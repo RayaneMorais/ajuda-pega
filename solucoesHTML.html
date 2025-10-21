@@ -1,47 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-language" content="pt-br" />
 
-<head>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-	<meta charset="utf-8">
-	<meta http-equiv="content-language" content="pt-br" />
+    <title>Ajuda Pega</title>
+  </head>
 
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-
-	<title>Ajuda Pega</title>
-
-</head>
-
-<body>
-
-
-	<main class="main_content container">
-
-		<div class="box-artigo">
-			<nav class="menu">
-				<ul>
-					<li><a href="index.html" title="Home" target="_self">Home</a></li>
-					<li><a href="funcoes.html" title="Funções" target="_self">Funções</a></li>
-					<li><a href="solucoesJava.html" title="Soluções Java" target="_self">Soluções Java</a></li>
-					<li><a href="solucoesCSS.html" title="Soluções CSS" target="_self">Soluções CSS</a></li>
-					<li><a href="solucoesHTML.html" title="Soluções HTML" target="_self">Soluções HTML</a></li>
-					<li><a href="servicoREST.html" title="Serviço REST" target="_self">Serviço REST</a></li>
-					<li><a href="ferramentaTracer.html" title="Ferramenta Tracer" target="_self">Ferramenta Tracer</a></li>
-
-				</ul>
-			</nav>
-		</div><!--Box Artigo-->
-
-		<div style="padding-left:30px">
-			<h2>Soluções HTML</h2>
-			<br>
-			<b>Chama When</b><br>
-			<em>Código:</em>
-			<pre
-				class="codigoCSS">
+  <body>
+    <main class="main_content container">
+      <div class="box-artigo">
+        <nav class="menu">
+          <ul>
+            <li><a href="index.html" title="Home" target="_self">Home</a></li>
+            <li>
+              <a href="funcoes.html" title="Funções" target="_self">Funções</a>
+            </li>
+            <li>
+              <a href="solucoesJava.html" title="Soluções Java" target="_self"
+                >Soluções Java</a
+              >
+            </li>
+            <li>
+              <a href="solucoesCSS.html" title="Soluções CSS" target="_self"
+                >Soluções CSS</a
+              >
+            </li>
+            <li>
+              <a href="solucoesHTML.html" title="Soluções HTML" target="_self"
+                >Soluções HTML</a
+              >
+            </li>
+            <li>
+              <a href="aplicacao.html" title="Mapeamento Serviço" target="_self"
+                >Mapeamento Serviço</a
+              >
+            </li>
+            <li>
+              <a
+                href="ferramentas.html"
+                title="Ferramenta Tracer"
+                target="_self"
+                >Ferramenta Tracer</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!--Box Artigo-->
+      <div class="content">
+        <div class="colLeft">
+          <h2>Soluções HTML</h2>
+          <br />
+          <b>Chama When</b><br />
+          <em>Código:</em>
+          <pre class="codigoCSS">
 <code class="language-html">&lt;pega:choose>
 	&lt;pega:when test="NomeWhen">
 	&lt;!-- HTML or XML code to execute for first when -->
@@ -55,25 +83,28 @@
     &lt;!-- selected if no previous when tag evaluates to true -->
 	&lt;/pega:otherwise>				
 &lt;/pega:choose></code></pre>
-			<br><br>
-			<b>Chama Section</b><br>
-			<em>Código:</em>
-			<pre
-				class="codigoHTML"><code class="language-html">&lt;pega:include name="NomeSection" type="Rule-HTML-Section">&lt;/pega:include></code></pre>
-			<br><br>
-			<b>Chama Paragrafo</b><br>
-			<em>Código:</em>
-			<pre
-				class="codigoHTML"><code class="language-html">&lt;pega:include name="NomeParagrafo" type="Rule-HTML-Paragraph">&lt;/pega:include></code></pre>
-			<br><br>
-			<b>Chama Property</b><br>
-			<em>Código:</em>
-			<pre
-				class="codigoHTML"><code class="language-html">&lt;pega:reference name=".NomePropriedade">&lt;/pega:reference></code></pre>
-			<br><br>
-			<b>Chama Lista</b><br>
-			<em>Código:</em>
-			<pre class="codigoCSS"><code class="language-html">
+          <br /><br />
+          <b>Chama Section</b><br />
+          <em>Código:</em>
+          <pre
+            class="codigoHTML"
+          ><code class="language-html">&lt;pega:include name="NomeSection" type="Rule-HTML-Section">&lt;/pega:include></code></pre>
+          <br /><br />
+          <b>Chama Paragrafo</b><br />
+          <em>Código:</em>
+          <pre
+            class="codigoHTML"
+          ><code class="language-html">&lt;pega:include name="NomeParagrafo" type="Rule-HTML-Paragraph">&lt;/pega:include></code></pre>
+          <br /><br />
+          <b>Chama Property</b><br />
+          <em>Código:</em>
+          <pre
+            class="codigoHTML"
+          ><code class="language-html">&lt;pega:reference name=".NomePropriedade">&lt;/pega:reference></code></pre>
+          <br /><br />
+          <b>Chama Lista</b><br />
+          <em>Código:</em>
+          <pre class="codigoCSS"><code class="language-html">
 &lt;pega:forEach name="Lista.pxResults">
 &lt;tr>
 &lt;td style='border-radius: 5px;border: 1px solid #0870b9; padding: 15px;text-align: left;vertical-align: middle;width: 60%;'> &lt;pega:reference name="$THIS.Name" /> &lt;/td>
@@ -81,11 +112,10 @@
 &lt;td style='border-radius: 5px;border: 1px solid #0870b9; padding: 15px;text-align: left;vertical-align: middle;width: 20%;'>  &lt;pega:reference name="$THIS.Height" /> &lt;/td>
 &lt;/tr>
 &lt;/pega:forEach></code></pre>
-		<br><br>
-			<b>Lógica Header</b><br>
-			<em>Código:</em>
-			<pre
-				class="codigoCSS"><code class="language-html">
+          <br /><br />
+          <b>Lógica Header</b><br />
+          <em>Código:</em>
+          <pre class="codigoCSS"><code class="language-html">
 &lt;pd4ml:page.header height=30 scope="1">
 &lt;p>Primeira Tela&lt;/p>
 &lt;/pd4ml:page.header>
@@ -94,11 +124,10 @@
 &lt;p>Segunda Tela em diante&lt;/p>
 &lt;/pd4ml:page.header>
 </code></pre>
-	<br><br>
-	<b>Lógica Footer</b><br>
-	<em>Código:</em>
-	<pre
-		class="codigoCSS"><code class="language-html">
+          <br /><br />
+          <b>Lógica Footer</b><br />
+          <em>Código:</em>
+          <pre class="codigoCSS"><code class="language-html">
 &lt;pd4ml:page.footer height=30 scope="1">
 &lt;p>Primeira Tela&lt;/p>
 &lt;/pd4ml:page.footer>
@@ -107,22 +136,84 @@
 &lt;p>Segunda Tela em diante&lt;/p>
 &lt;/pd4ml:page.footer>
 </code></pre>
-<br><br>
-</div>
-	</main>
+          <br /><br />
+        </div>
+      </div>
+      <div class="colRight">
+        <div class="box-right">
+          <div class="box-busca">
+            <div class="search-box">
+              <form method="post" action="#">
+                <input
+                  type="text"
+                  class="search-box-input"
+                  name="busca"
+                  placeholder="Faça sua Pesquisa"
+                />
+                <button class="search-box-button">
+                  <i class="search-box-icone fa fa-search"></i>
+                </button>
+              </form>
+              <br />
+            </div>
+            <!-- Search -->
+          </div>
+          <!--Box Busca-->
+          <!--Link Categorias-->
+          <article class="link_categorias">
+            <h3 class="titulo">Links de Ajuda</h3>
+            <br />
+            <ul>
+              <li>
+                <a
+                  href="https://www.howtopega.info"
+                  target="_blank"
+                  title="Blog Ajuda Pega"
+                  ><i class="search-box-icone fa fa-link"></i> Blog Ajuda
+                  Pega</a
+                >
+              </li>
+              <br />
+              <li>
+                <a
+                  href="https://support.pega.com"
+                  target="_blank"
+                  title="Suporte Pega"
+                  ><i class="search-box-icone fa fa-link"></i> Suporte Pega -
+                  PDN</a
+                >
+              </li>
+              <br />
+              <li>
+                <a
+                  href="https://docs-previous.pega.com/search"
+                  target="_blank"
+                  title=" Documentos Pega"
+                  ><i class="search-box-icone fa fa-link"></i> Documentos
+                  Pega</a
+                >
+              </li>
+              <br />
+            </ul>
+          </article>
+          <!--Link Categorias-->
+        </div>
+      </div>
+    </main>
 
-	<footer class="main_footer container">
-		<div class="main_footer_copy">
+    <footer class="main_footer container">
+      <div class="main_footer_copy">
+        <p class="m-b-footer">
+          Rayane Morais - 2023, todos os direitos reservados.
+        </p>
+        <p class="by">
+          <i class="icon icon-heart-3"></i> Desenvolvido por: Rayane Morais
+        </p>
+      </div>
+    </footer>
 
-			<p class="m-b-footer"> Rayane Morais - 2023, todos os direitos reservados.</p>
-			<p class="by"><i class="icon icon-heart-3"></i> Desenvolvido por: Rayane Morais</p>
-
-		</div>
-	</footer>
-
-	<script src="js/jquery.js"></script>
-	<script src="js/script.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
-</body>
-
+    <script src="js/jquery.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  </body>
 </html>

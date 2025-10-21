@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-language" content="pt-br" />
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>Ajuda Pega</title>
+  </head>
+
+  <body>
+    <main class="main_content container">
+      <div class="box-artigo">
+        <nav class="menu">
+          <ul>
+            <li><a href="index.html" title="Home" target="_self">Home</a></li>
+            <li>
+              <a href="funcoes.html" title="Funções" target="_self">Funções</a>
+            </li>
+            <li>
+              <a href="solucoesJava.html" title="Soluções Java" target="_self"
+                >Soluções Java</a
+              >
+            </li>
+            <li>
+              <a href="solucoesCSS.html" title="Soluções CSS" target="_self"
+                >Soluções CSS</a
+              >
+            </li>
+            <li>
+              <a href="solucoesHTML.html" title="Soluções HTML" target="_self"
+                >Soluções HTML</a
+              >
+            </li>
+            <li>
+              <a href="aplicacao.html" title="Mapeamento Serviço" target="_self"
+                >Mapeamento Serviço</a
+              >
+            </li>
+            <li>
+              <a
+                href="ferramentas.html"
+                title="Ferramenta Tracer"
+                target="_self"
+                >Ferramenta Tracer</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!--Box Artigo-->
+      <div class="content">
+        <div class="colLeft">
+          <h2>Mapear serviço REST</h2>
+          <br />
+          <div>
+            <p>
+              Para mapear um serviço REST primeiro temos que criar as regras de
+              integração.<br /><br />
+
+              <b>1.</b> Abra o <b>Designer Studio</b> > <b>Integration</b> >
+              <b>Connectors</b> > <b>Create REST Integration</b> <br /><br />
+              <img src="img/service1.png" alt="service1" /><br /><br />
+
+              <b>2.</b> Forneça o nome do serviço e endpoint URL. Se tiver
+              autenticação separada ou informações no header deve ser
+              passado.<br /><br />
+              <img src="img/service2.png" alt="service2" /><br /><br />
+
+              <b>3.</b> Antes de mapear no Pega deve ser testado no postman.<br /><br />
+              <img src="img/service3.png" alt="service3" /><br /><br />
+
+              <b>4.</b> Forneça o nome do recurso e selecione o método (GET,
+              POST, PUT, DELETE) que deseja usar para esta integração.<br /><br />
+              <img src="img/service4.png" alt="service4" /><br /><br />
+
+              <b>5.</b> Temos 2 opções para adicionar o modelo de dados. Você
+              pode adicionar o request e response do Postman ou apenas o request
+              e executar (run) para gerar automático o response.<br /><br />
+              <img src="img/service5.png" alt="service5" /><br /><br />
+
+              <b>6.</b> Outra tela importante, para montar a estrutura de
+              classes.<br />
+              Certifique-se de que, para a camada de integração, a classe Int
+              esteja selecionada como classe pai e o contexto como conjunto de
+              regras de integração.<br />
+              Deve ser definido a classe do Connect REST, nome, application e
+              ruleset ou versão. Também deve ser definido as mesmas informações
+              abaixo para o Data Page.<br /><br />
+              <img src="img/service6.png" alt="service6" /><br /><br />
+
+              <b>7.</b> Se necessário, visualize os registros e clique em criar.
+              Veja abaixo a lista de regras que a Pega criou<br />
+            </p>
+
+            <p style="padding-left: 30px">
+              - Data Page<br />
+              - Connect Rest<br />
+              - Classe necessária para integração<br />
+              - Propriedade necessária para integração<br />
+              - Data Transform de Response<br />
+              - Data Transform de Request <br /><br />
+            </p>
+
+            <p>
+              <b>8.</b> Logo em seguida pode finalizar chamando o Data Page do
+              serviço na section, data transform ou activity.<br /><br />
+            </p>
+            <h2>Creating a SOAP service using the Service Wizard</h2>
+            <br />
+            <div>
+              <p>
+                Você executa o <b>Service Wizard </b>para criar todos os
+                registros necessários para expor seu aplicativo como um serviço.
+                O Service Wizard orienta você a inserir as configurações
+                necessárias para criar o serviço. O mesmo não cria mapeamentos
+                XML para propriedades herdadas, portanto, você deve adicionar
+                essas propriedades conforme necessário.
+              </p>
+              <br />
+              <h4>Executando o Service Wizard</h4>
+              <br />
+              <p>
+                <b>1.</b> No Designer Studio, selecione
+                <b>Configure > Integration > Services > Service Wizard</b> para
+                iniciar o Service Wizard.
+              </p>
+              <br />
+              <img
+                src="img/serviceWizard.png"
+                alt="serviceWizard"
+              /><br /><br />
+              <p>
+                <b>2.</b> Preencha a sessão Select Service Purpose section:<br />
+              </p>
+              <p style="padding-left: 30px">
+                <b>a.</b> Defina o <b>Service Purpose</b> para
+                <em>Create and manage work</em>.<br />
+                <b>b.</b> Defina o <b>Service Type</b> como SOAP.<br />
+                <b>c.</b> Clique em <b>Next</b> para seguir.<br /><br />
+              </p>
+              <img
+                src="img/serviceWizardUpdates.png"
+                alt="serviceWizardUpdates"
+              /><br /><br />
+              <p>
+                <b>3.</b> Complete a sessão
+                <b>Provide Service Details — Select Work Properties</b>:
+              </p>
+              <p style="padding-left: 30px">
+                <b>a.</b> Defina <b>Work Type</b> com o tipo do case.<br />
+                <b>b.</b> Defina <b>Flow Type</b> com o tipo do fluxo como
+                <em>pyStartCase</em>. <b>c.</b> Selecione <b>Create Work</b> e
+                defina a <b>Organization</b> se desejar.<br />
+                <b>d.</b> Clique em <b>Next</b> para seguir.<br /><br />
+              </p>
+              <img
+                src="img/serviceWizardDetails.png"
+                alt="serviceWizardDetails"
+              /><br /><br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="colRight">
+        <div class="box-right">
+          <div class="box-busca">
+            <div class="search-box">
+              <form method="post" action="#">
+                <input
+                  type="text"
+                  class="search-box-input"
+                  name="busca"
+                  placeholder="Faça sua Pesquisa"
+                />
+                <button class="search-box-button">
+                  <i class="search-box-icone fa fa-search"></i>
+                </button>
+              </form>
+              <br />
+            </div>
+            <!-- Search -->
+          </div>
+          <!--Box Busca-->
+          <!--Link Categorias-->
+          <!--Link Categorias-->
+          <article class="link_categorias">
+            <h3 class="titulo">
+              <span class="icon icon-code"></span> Links de Ajuda
+            </h3>
+            <br />
+            <ul>
+              <li>
+                <a
+                  href="https://www.howtopega.info"
+                  target="_blank"
+                  title="Blog Ajuda Pega"
+                  ><i class="search-box-icone fa fa-link"></i> Blog Ajuda
+                  Pega</a
+                >
+              </li>
+              <br />
+              <li>
+                <a
+                  href="https://support.pega.com"
+                  target="_blank"
+                  title="Suporte Pega"
+                  ><i class="search-box-icone fa fa-link"></i> Suporte Pega -
+                  PDN</a
+                >
+              </li>
+              <br />
+              <li>
+                <a
+                  href="https://docs-previous.pega.com/search"
+                  target="_blank"
+                  title=" Documentos Pega"
+                  ><i class="search-box-icone fa fa-link"></i> Documentos
+                  Pega</a
+                >
+              </li>
+              <br />
+            </ul>
+          </article>
+          <!--Link Categorias-->
+        </div>
+      </div>
+    </main>
+
+    <footer class="main_footer container">
+      <div class="main_footer_copy">
+        <p class="m-b-footer">
+          Rayane Morais - 2023, todos os direitos reservados.
+        </p>
+        <p class="by">
+          <i class="icon icon-heart-3"></i> Desenvolvido por: Rayane Morais
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="dist/clipboard.min.js"></script>
+  </body>
+</html>

@@ -1,47 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-language" content="pt-br" />
 
-<head>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-  <meta charset="utf-8">
-  <meta http-equiv="content-language" content="pt-br" />
+    <title>Ajuda Pega</title>
+  </head>
 
-  <link rel="stylesheet" type="text/css" href="css/reset.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-
-  <title>Ajuda Pega</title>
-
-</head>
-
-<body>
-
-
-  <main class="main_content container">
-
-    <div class="box-artigo">
-      <nav class="menu">
-        <ul>
-          <li><a href="index.html" title="Home" target="_self">Home</a></li>
-          <li><a href="funcoes.html" title="Funções" target="_self">Funções</a></li>
-          <li><a href="solucoesJava.html" title="Soluções Java" target="_self">Soluções Java</a></li>
-          <li><a href="solucoesCSS.html" title="Soluções CSS" target="_self">Soluções CSS</a></li>
-          <li><a href="solucoesHTML.html" title="Soluções HTML" target="_self">Soluções HTML</a></li>
-          <li><a href="servicoREST.html" title="Serviço REST" target="_self">Serviço REST</a></li>
-          <li><a href="ferramentaTracer.html" title="Ferramenta Tracer" target="_self">Ferramenta Tracer</a></li>
-
-        </ul>
-      </nav>
-    </div><!--Box Artigo-->
-
-    <div style="padding-left:30px">
-      <h2>Soluções CSS</h2>
-      <br>
-      <b>Icone Personalizado</b> <img src="img/icone personalizado.png" width alt="Icone Personalizado"> usado
-      para criar um novo icone de contador, onde foi adicionado uma propriedade para ser exibida.<br>
-      <em><b>Código:</b></em><br>
-      <pre class="codigoCSS"><code class="language-javascript">
+  <body>
+    <main class="main_content container">
+      <div class="box-artigo">
+        <nav class="menu">
+          <ul>
+            <li><a href="index.html" title="Home" target="_self">Home</a></li>
+            <li>
+              <a href="funcoes.html" title="Funções" target="_self">Funções</a>
+            </li>
+            <li>
+              <a href="solucoesJava.html" title="Soluções Java" target="_self"
+                >Soluções Java</a
+              >
+            </li>
+            <li>
+              <a href="solucoesCSS.html" title="Soluções CSS" target="_self"
+                >Soluções CSS</a
+              >
+            </li>
+            <li>
+              <a href="solucoesHTML.html" title="Soluções HTML" target="_self"
+                >Soluções HTML</a
+              >
+            </li>
+            <li>
+              <a href="aplicacao.html" title="Mapeamento Serviço" target="_self"
+                >Mapeamento Serviço</a
+              >
+            </li>
+            <li>
+              <a
+                href="ferramentas.html"
+                title="Ferramenta Tracer"
+                target="_self"
+                >Ferramenta Tracer</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!--Box Artigo-->
+      <div class="content">
+        <div class="colLeft">
+          <h2>Soluções CSS</h2>
+          <br />
+          <b>Icone Personalizado</b>
+          <img
+            src="img/icone personalizado.png"
+            width="100"
+            alt="Icone Personalizado"
+          />
+          usado para criar um novo icone de contador, onde foi adicionado uma
+          propriedade para ser exibida.<br />
+          <em><b>Código:</b></em
+          ><br />
+          <pre class="codigoCSS"><code class="language-javascript">
 <%
   String initialsClass = "Oi-NovaFibra-Oferta";
   String name = tools.findPage("pyWorkPage.NovaFibra").getProperty(".OfertaAtendimento.ContServicosAdicionais").toString();
@@ -52,15 +88,16 @@
 &lt;i class='icons avatar <%=initialsClass%> <%=StringUtils.crossScriptingFilter(tools.getParamValue("class"))%>' style="width: <%=sWidth%>; height: <%=sHeight%>; " title='<%=name%>'>
 &lt;svg viewBox="0 0 100 100" pointer-events="none" xmlns="http://www.w3.org/2000/svg" >
 &lt;circle cx="50" cy="50" r="50" />
-&lt;text x="49%" y="75%" font-style="normal" font-weight="normal" font-family="Arial, Helvetica, sans-serif" pointer-events="auto" text-anchor="middle" fill="white" font-size="70"><%=name%></text>
+&lt;text x="49%" y="75%" font-style="normal" font-weight="normal" font-family="Arial, Helvetica, sans-serif" pointer-events="auto" text-anchor="middle" fill="white" font-size="70"><%=name%>&lt;/text&gt;
 &lt;/svg>
 &lt;/i>
 			</code></pre>
 
-      <br><br>
-      <b>Centered customizado</b> usado para centralizar todos os componentes do pega.<br>
-      <em><b>Código:</b></em> <br>
-      <pre class="codigoCSS"><code class="language-css">	
+          <br /><br />
+          <b>Centered customizado</b> usado para centralizar todos os
+          componentes do pega.<br />
+          <em><b>Código:</b></em> <br />
+          <pre class="codigoCSS"><code class="language-css">	
 .centered {
   text-align: center;
   vertical-align: middle;
@@ -69,10 +106,11 @@
   justify-content: center;
 }
 </code></pre>
-      <br><br>
-      <b>Tamanho Tela</b> adicionando tamanho minimo e máximo da tela com CSS.<br>
-      <em><b>Código:</b><br></em>
-      <pre class="codigoCSS"><code class="language-css">	
+          <br /><br />
+          <b>Tamanho Tela</b> adicionando tamanho minimo e máximo da tela com
+          CSS.<br />
+          <em><b>Código:</b><br /></em>
+          <pre class="codigoCSS"><code class="language-css">	
 @media all and (min-width: 1024px) {
   .DLExternoResponsivo {
     width: 944px !important;
@@ -87,15 +125,16 @@
   }
 }	
 </code></pre>
-      <br><br>
+          <br /><br />
 
-      <b>Novas Fontes</b> adicionando novas fontes ao pega.<br>
-      1- Deve importar os respectivos arquivos binários de cada fonte no diretório webwb e com o tipo
-      correspondente.<br>
-      2- Adicionar um nova folha de estilo e adicionar na Skin, na aba Included styles com a seguinte
-      estrutura:<br>
-      <em><b>Código:</b></em><br>
-      <pre class="codigoCSS"><code class="language-css">		
+          <b>Novas Fontes</b> adicionando novas fontes ao pega.<br />
+          1- Deve importar os respectivos arquivos binários de cada fonte no
+          diretório webwb e com o tipo correspondente.<br />
+          2- Adicionar um nova folha de estilo e adicionar na Skin, na aba
+          Included styles com a seguinte estrutura:<br />
+          <em><b>Código:</b></em
+          ><br />
+          <pre class="codigoCSS"><code class="language-css">		
 @font-face {
   font-family: 'NomeFonte';
   src: url('webwb/NomeFonte.eot?');
@@ -162,23 +201,85 @@
   font-style: normal;
 }
 </code></pre>
-      <br><br>
-    </div>
-    <br><br>
-  </main>
+          <br /><br />
+        </div>
+        <br /><br />
+      </div>
+      <div class="colRight">
+        <div class="box-right">
+          <div class="box-busca">
+            <div class="search-box">
+              <form method="post" action="#">
+                <input
+                  type="text"
+                  class="search-box-input"
+                  name="busca"
+                  placeholder="Faça sua Pesquisa"
+                />
+                <button class="search-box-button">
+                  <i class="search-box-icone fa fa-search"></i>
+                </button>
+              </form>
+              <br />
+            </div>
+            <!-- Search -->
+          </div>
+          <!--Box Busca-->
+          <!--Link Categorias-->
+          <article class="link_categorias">
+            <h3 class="titulo">Links de Ajuda</h3>
+            <br />
+            <ul>
+              <li>
+                <a
+                  href="https://www.howtopega.info"
+                  target="_blank"
+                  title="Blog Ajuda Pega"
+                  ><i class="search-box-icone fa fa-link"></i> Blog Ajuda
+                  Pega</a
+                >
+              </li>
+              <br />
+              <li>
+                <a
+                  href="https://support.pega.com"
+                  target="_blank"
+                  title="Suporte Pega"
+                  ><i class="search-box-icone fa fa-link"></i> Suporte Pega -
+                  PDN</a
+                >
+              </li>
+              <br />
+              <li>
+                <a
+                  href="https://docs-previous.pega.com/search"
+                  target="_blank"
+                  title=" Documentos Pega"
+                  ><i class="search-box-icone fa fa-link"></i> Documentos
+                  Pega</a
+                >
+              </li>
+              <br />
+            </ul>
+          </article>
+          <!--Link Categorias-->
+        </div>
+      </div>
+    </main>
 
-  <footer class="main_footer container">
-    <div class="main_footer_copy">
+    <footer class="main_footer container">
+      <div class="main_footer_copy">
+        <p class="m-b-footer">
+          Rayane Morais - 2023, todos os direitos reservados.
+        </p>
+        <p class="by">
+          <i class="icon icon-heart-3"></i> Desenvolvido por: Rayane Morais
+        </p>
+      </div>
+    </footer>
 
-      <p class="m-b-footer"> Rayane Morais - 2023, todos os direitos reservados.</p>
-      <p class="by"><i class="icon icon-heart-3"></i> Desenvolvido por: Rayane Morais</p>
-
-    </div>
-  </footer>
-
-  <script src="js/jquery.js"></script>
-  <script src="js/script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
-</body>
-
+    <script src="js/jquery.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  </body>
 </html>
