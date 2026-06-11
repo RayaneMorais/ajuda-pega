@@ -10,6 +10,14 @@
     line-height: 22px;
 }
 
+
+h2 {
+    padding-top: 3%;
+    text-align: center;
+    color: #202454;
+    text-shadow: #00a4a6 0.1em 0.1em 0.2em;
+}
+
 /*Reset basico das midias*/
 
 img {
@@ -26,9 +34,9 @@ fieldset {
     border: 0;
 }
 
-input,
-select,
-textarea {
-    padding: 10px;
-    width: 100%;
+input{
+box-sizing: border-box;
+border: 1px solid #00a4a6;
+border-radius: 4px;
+padding: 5px;
 }

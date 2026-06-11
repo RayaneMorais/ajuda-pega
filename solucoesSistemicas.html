@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="utf-8" />
@@ -13,6 +13,10 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
     <title>Ajuda Pega</title>
@@ -54,7 +58,7 @@
                 target="_self"
                 >Ferramenta Tracer</a
               >
-            </li>
+            </li>            
             <li>
               <a
                 href="solucoesSistemicas.html"
@@ -67,8 +71,29 @@
         </nav>
       </div>
       <!--Box Artigo-->
-      <div>
-        <img src="img/home.jpg" alt="home" style="width: 100%; height: 100%" />
+      <div class="content">
+        <div class="colLeft">
+          <h2>Soluções Sistêmicas - Erro Indexação</h2>
+          <br />
+          <p>
+            Erro ao localizar casos utilizando os campos de pesquisa do Pega. Ao verificar a fila de logs, são identificados itens interrompidos no Job <b>pySASIncrementalIndexer</b> para a classe do caso pesquisado.
+          </p>
+          <br />
+          <p><b>Exemplo de erro apresentado:</b></p>
+          <br />
+          <p><pxException>com.pega.platform.executor.queueprocessor.QueueProcessorException: SRS storage reported the following error while purging previously indexed instances of 'UHG-SalesExp-Work-Opportunity-SG': Unable to purge data in the storage, HTTP status code: 504 Gateway Timeout, response body: upstream request timeout, entity name: UHG-SalesExp-Work-Opportunity-SG</p>
+          <p>Para corrigir o problema, é necessário realizar a reindexação da classe afetada. Segue o passo a passo:</p>
+          <br /><br />          
+          <img src="img/caminhoIndexacao.png" alt="caminhoIndexacao()" />
+        <br /><br />
+        <p>Para realizar a reindexação no Pega 24.2, acesse a classe que está apresentando erro e selecione a opção <b>“Dados do Índice”</b>.
+Na sequência, inicie o processo de indexação da classe. Após a execução, o status deverá permanecer como <b>“Indexação Contínua”</b>, indicando que o processo foi iniciado corretamente.
+Caso a reindexação não seja concluída ou o problema persista, utilize a opção <b>“Sincronizar”</b> para atualizar os dados do índice e, em seguida, repita o processo de reindexação anteriormente realizado.
+Após a conclusão, recomenda-se validar novamente a pesquisa dos casos para confirmar que a indexação foi normalizada.
+Segue abaixo a imagem de referência para auxílio no procedimento:</p>
+<br/>
+        <img src="img/Indexacao.png" alt="Indexacao()" />
+        <br /><br />
       </div>
     </main>
 
@@ -83,8 +108,8 @@
       </div>
     </footer>
 
+    <script src="js/jquery.js"></script>
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
-    <script src="dist/clipboard.min.js"></script>
   </body>
 </html>
